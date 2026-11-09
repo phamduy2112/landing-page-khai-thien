@@ -1,55 +1,65 @@
 import React from 'react';
-import { Star, MessageSquareQuote, CheckCircle2 } from 'lucide-react';
-import { testimonialsData } from '../data/landingData';
+import { Star, MessageSquareQuote } from 'lucide-react';
 
 export default function Testimonials() {
+  const reviews = [
+    {
+      name: 'Anh Hoàng Nam',
+      project: 'Masteri Thảo Điền (3PN)',
+      quote: 'Căn hộ bàn giao thực tế sắc nét y như bản vẽ 3D. Đội thợ xưởng làm việc tỉ mỉ, ray kéo và bản lề Hafele êm ái.'
+    },
+    {
+      name: 'Chị Mai Lan',
+      project: 'Nhà Phố KDC Cityland Gò Vấp',
+      quote: 'Làm việc trực tiếp với xưởng tiết kiệm được hơn 70 triệu so với các bên thiết kế thương mại. Rất hài lòng.'
+    },
+    {
+      name: 'Anh Quốc Bảo',
+      project: 'Vinhomes Grand Park (2PN)',
+      quote: 'Đúng tiến độ 22 ngày xuất xưởng. Ván gỗ An Cường chuẩn E1 không bị mùi hắc, gia đình có con nhỏ rất an tâm.'
+    }
+  ];
+
   return (
-    <section className="py-20 bg-slate-50/60 border-t border-slate-100">
+    <section className="py-20 bg-white border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 text-slate-800 text-xs font-bold uppercase tracking-wider">
-            <MessageSquareQuote className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-            <span>Niềm Tin Từ Khách Hàng</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 text-balance">
-            Gia Chủ Nói Gì Về Khải Thiên Furnishing?
+
+        {/* Header */}
+        <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
+
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
+            Ý Kiến Gia Chủ
           </h2>
-          <p className="text-slate-600 text-base leading-relaxed text-pretty">
-            Sự hài lòng tuyệt đối của quý khách khi bước vào tổ ấm mới chính là thành quả quý giá nhất của đội ngũ chúng&nbsp;tôi.
+          <p className="text-slate-500 text-xs sm:text-sm">
+            Phản hồi thực tế từ các công trình đã bàn giao
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonialsData.map((item, idx) => (
+        {/* Reviews Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {reviews.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+              className="bg-[#FCFBF9] rounded-2xl p-6 border border-stone-200/90 shadow-xs hover:shadow-md transition flex flex-col justify-between space-y-4"
             >
-              <div className="space-y-4">
-                {/* 5 Stars */}
+              <div className="space-y-3">
                 <div className="flex items-center gap-1 text-amber-500">
-                  {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-
-                {/* Comment */}
-                <p className="text-slate-700 text-sm leading-relaxed italic text-pretty">
-                  "{item.comment}"
+                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
+                  "{item.quote}"
                 </p>
               </div>
 
-              {/* Author */}
-              <div className="pt-4 mt-6 border-t border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-sm shrink-0">
-                  {item.name.charAt(item.name.lastIndexOf(' ') + 1)}
+              <div className="pt-3 border-t border-stone-200/60 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-xs shrink-0">
+                  {item.name.slice(-1)}
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 whitespace-nowrap">{item.name}</h4>
-                  <p className="text-xs text-slate-500 whitespace-nowrap">{item.role}</p>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900">{item.name}</h4>
+                  <p className="text-[11px] text-slate-500">{item.project}</p>
                 </div>
               </div>
             </div>
@@ -60,4 +70,3 @@ export default function Testimonials() {
     </section>
   );
 }
-

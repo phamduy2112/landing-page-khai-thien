@@ -71,47 +71,34 @@ export default function ConsultationForm() {
   return (
     <section id="consultation" className="py-24 bg-gradient-to-b from-[#FCFBF9] to-stone-100 border-t border-stone-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-          
-          {/* Cột trái: Giá trị cam kết khi tư vấn */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-              <span>Đăng Ký Tư Vấn & Khảo Sát Miễn Phí</span>
-            </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-snug sm:leading-normal text-balance">
-              Nhận Phối Cảnh 3D & Bảng Dự Toán <span className="text-amber-700 italic font-normal whitespace-nowrap">Miễn&nbsp;Phí</span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          {/* Cột trái: Tinh gọn cam kết */}
+          <div className="lg:col-span-5 space-y-5">
+
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance">
+              Nhận Phối Cảnh 3D & Báo Giá Xưởng
             </h2>
 
-            <p className="text-slate-600 text-base leading-relaxed text-pretty">
-              Kiến trúc sư của Khải Thiên Furnishing sẽ liên hệ và trực tiếp đến khảo sát đo đạc hiện trạng, mang theo các bảng mẫu catalogue ván gỗ An Cường thực tế để quý khách trải&nbsp;nghiệm.
+            <p className="text-slate-600 text-sm leading-relaxed text-pretty">
+              KTS Khải Thiên liên hệ tư vấn giải pháp bám sát ngân sách và mang mẫu ván An Cường khảo sát tận nơi miễn phí.
             </p>
 
-            <div className="space-y-4 pt-2">
-              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-stone-200/80 shadow-xs">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <div className="text-xs sm:text-sm text-slate-700 text-pretty">
-                  <strong className="text-slate-900 block font-bold">Khảo sát & Đo đạc tận nơi 0đ</strong>
-                  Đo đạc chính xác kích thước thực tế, tư vấn giải pháp bố trí mặt bằng công năng tối&nbsp;ưu.
-                </div>
+            <div className="space-y-3 pt-1">
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Khảo sát & đo đạc hiện trạng tận nơi 0đ</span>
               </div>
 
-              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-stone-200/80 shadow-xs">
-                <ShieldCheck className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <div className="text-xs sm:text-sm text-slate-700 text-pretty">
-                  <strong className="text-slate-900 block font-bold">Trải nghiệm mẫu vật liệu thực tế</strong>
-                  Xem tận mắt các mã ván gỗ Melamine, Acrylic bóng gương An Cường và phụ kiện Hafele.
-                </div>
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
+                <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+                <span>Trực tiếp xem mẫu ván An Cường chính hãng</span>
               </div>
 
-              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-stone-200/80 shadow-xs">
-                <PhoneCall className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                <div className="text-xs sm:text-sm text-slate-700 text-pretty">
-                  <strong className="text-slate-900 block font-bold">Chuyên viên phản hồi trong 30 phút</strong>
-                  Hỗ trợ nhanh bởi Mr. Thành Tín: <strong className="text-amber-800 whitespace-nowrap">{brandInfo.hotline1}</strong>
-                </div>
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
+                <PhoneCall className="w-4 h-4 text-blue-600 shrink-0" />
+                <span>Báo giá bóc tách chi tiết không phát sinh</span>
               </div>
             </div>
           </div>
@@ -119,7 +106,7 @@ export default function ConsultationForm() {
           {/* Cột phải: Form nhập liệu cao cấp */}
           <div className="lg:col-span-7">
             <div className="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-2xl relative overflow-hidden">
-              
+
               {status === 'success' ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
@@ -165,11 +152,10 @@ export default function ConsultationForm() {
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="VD: Nguyễn Văn An"
-                        className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${
-                          errors.fullName
+                        className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.fullName
                             ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
                             : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
-                        }`}
+                          }`}
                       />
                       {errors.fullName && (
                         <p className="text-rose-600 text-xs mt-1 flex items-center gap-1">
@@ -190,11 +176,10 @@ export default function ConsultationForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="VD: 0931 337 737"
-                        className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${
-                          errors.phone
+                        className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.phone
                             ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
                             : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
-                        }`}
+                          }`}
                       />
                       {errors.phone && (
                         <p className="text-rose-600 text-xs mt-1 flex items-center gap-1">

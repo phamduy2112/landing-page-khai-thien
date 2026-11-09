@@ -1,162 +1,115 @@
-import React, { useState } from 'react';
-import { Sofa, Utensils, BedDouble, Shirt, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
-import { roomShowcaseData } from '../data/landingData';
+import React from 'react';
+import { Sofa, Utensils, BedDouble, Shirt, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function RoomExperience() {
-  const [activeRoomId, setActiveRoomId] = useState('living-room');
-
-  const activeRoom = roomShowcaseData.find(r => r.id === activeRoomId) || roomShowcaseData[0];
-
-  const roomIcons = {
-    'living-room': Sofa,
-    'kitchen': Utensils,
-    'master-bedroom': BedDouble,
-    'walkin-closet': Shirt,
-  };
+  const rooms = [
+    {
+      id: 'living-room',
+      icon: Sofa,
+      name: 'Phòng Khách',
+      enName: 'LIVING ROOM SPACE',
+      materials: 'Ván MDF lõi xanh An Cường phủ Melamine, vách lam sóng & đá tự nhiên',
+      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85',
+      badge: 'Bộ Mặt Gia Chủ'
+    },
+    {
+      id: 'kitchen',
+      icon: Utensils,
+      name: 'Phòng Bếp & Ăn',
+      enName: 'KITCHEN & DINING',
+      materials: 'Thùng Picomat chịu nước 100%, cánh MDF Acrylic bóng gương No-line',
+      image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85',
+      badge: 'Chống Ẩm Tuyệt Đối'
+    },
+    {
+      id: 'master-bedroom',
+      icon: BedDouble,
+      name: 'Phòng Ngủ Master',
+      enName: 'MASTER BEDROOM SUITE',
+      materials: 'Gỗ An Cường vân sồi tự nhiên, giường bọc nỉ & vách ốp đầu giường',
+      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85',
+      badge: 'Thư Thái & Êm Dịu'
+    }
+  ];
 
   return (
-    <section id="room-experience" className="py-24 bg-white border-t border-slate-200/80">
+    <section id="room-experience" className="py-20 bg-[#FAF8F5] border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-800 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-            <span>Trải Nghiệm Không Gian Mẫu</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 text-balance">
-            Nghệ Thuật Kiến Tạo Từng Không Gian&nbsp;Sống
+        <div className="max-w-2xl mx-auto text-center space-y-2 mb-12">
+
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
+            Khám Phá Từng Không Gian Sống
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed text-pretty">
-            Mỗi căn phòng sở hữu công năng và ngôn ngữ thiết kế riêng biệt. Hãy chọn không gian bạn muốn nâng&nbsp;tầm:
+          <p className="text-slate-600 text-xs sm:text-sm">
+            Trải nghiệm các hạng mục nội thất may đo chuẩn kích thước thực tế
           </p>
         </div>
 
-        {/* Room Navigation Tabs */}
-        <div className="mt-12 flex flex-wrap justify-center gap-3 sm:gap-4">
-          {roomShowcaseData.map((room, idx) => {
-            const IconComponent = roomIcons[room.id] || Sofa;
-            const isActive = activeRoomId === room.id;
+        {/* 4 Room Cards Grid (2 Hàng x 2 Cột - Trắng ngà thanh lịch) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {rooms.map((room) => {
+            const Icon = room.icon;
+
             return (
-              <button
+              <div
                 key={room.id}
-                type="button"
-                onClick={() => setActiveRoomId(room.id)}
-                className={`flex items-center gap-3 py-3 px-6 rounded-2xl border text-sm font-bold transition-all duration-300 whitespace-nowrap ${
-                  isActive
-                    ? 'bg-slate-900 border-slate-900 text-white shadow-xl -translate-y-0.5'
-                    : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700'
-                }`}
+                className="bg-white rounded-3xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
-                <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-extrabold shrink-0 ${
-                  isActive ? 'bg-amber-500 text-slate-950' : 'bg-white text-slate-500 border border-slate-200'
-                }`}>
-                  0{idx + 1}
-                </span>
-                <div className="text-left">
-                  <span className="block leading-tight">{room.name}</span>
-                  <span className={`text-[10px] uppercase tracking-wider font-normal ${isActive ? 'text-amber-300' : 'text-slate-400'}`}>
-                    {room.enName}
+                {/* Photo */}
+                <div className="relative h-60 sm:h-72 overflow-hidden bg-stone-100">
+                  <img
+                    src={room.image}
+                    alt={room.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Top Badges */}
+                  <div className="absolute top-4 left-4 flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md border border-stone-200 text-slate-800 text-xs font-bold shadow-xs">
+                      <Icon className="w-3.5 h-3.5 text-amber-600" />
+                      <span>{room.name}</span>
+                    </span>
+                  </div>
+
+                  <span className="absolute top-4 right-4 text-[11px] font-bold px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 shadow">
+                    {room.badge}
                   </span>
                 </div>
-              </button>
-            );
-          })}
-        </div>
 
-        {/* Room Detail Display - Architectural Layout */}
-        <div className="mt-14 bg-gradient-to-br from-slate-50 to-white rounded-3xl border border-slate-200/90 shadow-2xl p-6 sm:p-10 lg:p-12 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            
-            {/* Visual Frame with Image & Floating Callouts */}
-            <div className="lg:col-span-7 relative group">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 h-[380px] sm:h-[480px]">
-                <img
-                  src={activeRoom.image}
-                  alt={activeRoom.name}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
-
-                {/* Bottom Room Banner */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/10 text-white flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                {/* Content */}
+                <div className="p-6 space-y-3">
                   <div>
-                    <span className="text-[10px] text-amber-400 font-bold uppercase tracking-widest block">Tiêu chuẩn bàn giao</span>
-                    <h4 className="text-base font-bold text-white ">{activeRoom.name} – {activeRoom.enName}</h4>
+                    <span className="text-[10px] text-amber-700 font-bold uppercase tracking-widest block">
+                      {room.enName}
+                    </span>
+                    <h3 className="text-xl font-bold text-slate-900 mt-0.5">
+                      {room.name}
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                      {room.materials}
+                    </p>
                   </div>
-                  <a
-                    href="#consultation"
-                    className="inline-flex items-center gap-1.5 text-xs text-amber-300 hover:text-white font-bold transition"
-                  >
-                    <span>Tư vấn bản vẽ phòng này</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+
+                  <div className="pt-2">
+                    <a
+                      href="#consultation"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-slate-900 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold transition duration-200 shadow"
+                    >
+                      <span>Nhận Báo Giá {room.name}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
               </div>
-
-              {/* Tag Badge */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md py-1.5 px-4 rounded-xl shadow-lg border border-slate-200/80 text-xs font-bold text-slate-900 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
-                <span>Thi công thực tế bởi Khải Thiên</span>
-              </div>
-            </div>
-
-            {/* Information & Specifications */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-amber-700">
-                  Ý TƯỞNG THIẾT KẾ ĐỘC BẢN
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 ">
-                  {activeRoom.name}
-                </h3>
-                <p className="text-slate-600 text-sm leading-relaxed italic">
-                  "{activeRoom.tagline}"
-                </p>
-              </div>
-
-              {/* Highlights List */}
-              <div className="space-y-3.5 pt-2">
-                <h5 className="text-xs font-extrabold uppercase tracking-wider text-slate-400">
-                  Điểm Nhấn Kỹ Thuật & Vật Liệu:
-                </h5>
-                {activeRoom.highlights.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
-                    <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-xs sm:text-sm font-bold text-slate-900 block">{item.label}</strong>
-                      <span className="text-xs text-slate-600 mt-0.5 block">{item.desc}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Material Spec Pill */}
-              <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 space-y-1 text-xs">
-                <span className="font-bold text-amber-900 uppercase tracking-wider block">Vật liệu chủ đạo tuyển chọn:</span>
-                <p className="text-slate-700 leading-relaxed font-medium">
-                  {activeRoom.materials}
-                </p>
-              </div>
-
-              {/* Action Button */}
-              <div className="pt-2">
-                <a
-                  href="#consultation"
-                  className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-bold text-sm transition-all duration-200 shadow-md text-balance"
-                >
-                  <span>Nhận Báo Giá Chi Tiết Không Gian&nbsp;Này</span>
-                  <ArrowRight className="w-4 h-4 shrink-0" />
-                </a>
-              </div>
-            </div>
-
-          </div>
+            );
+          })}
         </div>
 
       </div>
     </section>
   );
 }
-
