@@ -28,13 +28,10 @@ export default function WhyChooseUs() {
   return (
     <section id="commitments" className="py-20 bg-[#FAF8F5] text-slate-800 relative overflow-hidden border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/70 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wider">
-            <Award className="w-3.5 h-3.5 shrink-0" />
-            <span>Cam Kết Xuất Xưởng</span>
-          </div>
+
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
             4 Cam Kết Vàng
           </h2>
