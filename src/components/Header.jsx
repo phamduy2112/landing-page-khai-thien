@@ -17,7 +17,7 @@ export default function Header() {
   const navLinks = [
     { name: 'Dịch Vụ', href: '#services' },
     { name: 'Dự Án', href: '#portfolio' },
-    { name: 'FAQ', href: '#factory' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Cơ Sở', href: '#he-thong-co-so' },
   ];
 
