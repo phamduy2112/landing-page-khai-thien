@@ -69,7 +69,7 @@ export default function ConsultationForm() {
   };
 
   return (
-    <section id="consultation" className="py-24 bg-gradient-to-b from-[#FCFBF9] to-stone-100 border-t border-stone-200 relative overflow-hidden">
+    <section id="consultation" className="py-20 bg-[#FAF8F5] border-t border-stone-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
