@@ -153,8 +153,8 @@ export default function ConsultationForm() {
                         onChange={handleChange}
                         placeholder="VD: Nguyễn Văn An"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.fullName
-                            ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
-                            : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
+                          ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
+                          : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
                           }`}
                       />
                       {errors.fullName && (
@@ -177,8 +177,8 @@ export default function ConsultationForm() {
                         onChange={handleChange}
                         placeholder="VD: 0931 337 737"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.phone
-                            ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
-                            : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
+                          ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
+                          : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
                           }`}
                       />
                       {errors.phone && (

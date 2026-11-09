@@ -36,10 +36,10 @@ export default function WhyChooseUs() {
   return (
     <section id="commitments" className="py-20 bg-[#FAF8F5] text-slate-800 relative overflow-hidden border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Layout 2 cột: Hình ảnh bên Trái - 4 Cam kết bên Phải */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           {/* Cột Trái: Hình ảnh thực tế xưởng / thi công hoàn thiện */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-stone-200/90 shadow-md group">
@@ -67,13 +67,10 @@ export default function WhyChooseUs() {
 
           {/* Cột Phải: Tiêu đề & 4 Cam Kết Vàng */}
           <div className="lg:col-span-7 space-y-6">
-            
+
             {/* Header Cột Phải */}
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-200 text-amber-800 text-xs font-semibold">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
-                <span>Tiêu Chuẩn Khải Thiên</span>
-              </div>
+
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-[0.015em]">
                 4 Cam Kết Vàng Cho Mọi Gia Chủ
               </h2>

@@ -32,10 +32,7 @@ export default function Testimonials() {
 
         {/* Header */}
         <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-200 text-amber-800 text-xs font-semibold">
-            <CheckCircle className="w-3.5 h-3.5 text-amber-600" />
-            <span>Thực Tế Nghiệm Thu</span>
-          </div>
+
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-[0.015em]">
             Ý Kiến Gia Chủ
           </h2>
