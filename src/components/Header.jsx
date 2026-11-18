@@ -67,7 +67,7 @@ export default function Header() {
           </div>
 
           {/* Nút Liên Hệ Ngay */}
-          <div className="hidden sm:flex items-center">
+          <div className="hidden md:flex items-center">
             <a
               href="#consultation"
               className="inline-flex items-center gap-2 bg-slate-900 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-xl transition-all duration-200 shadow-sm whitespace-nowrap"
