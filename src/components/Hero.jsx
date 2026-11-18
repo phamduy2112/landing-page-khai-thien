@@ -19,7 +19,7 @@ export default function Hero() {
             {/* H1 Luxury Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance space-y-1.5 sm:space-y-2">
               <span className="">Thiết Kế & Thi Công Nội Thất</span>
-              <span className="italic font-normal text-amber-700 ">Trọn Gói Trực Tiếp Từ Xưởng</span>
+              <span className=" text-amber-700 "> Trọn Gói Trực Tiếp Từ Xưởng</span>
             </h1>
 
             {/* Subtitle - Ngắn gọn */}
