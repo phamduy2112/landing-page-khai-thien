@@ -305,7 +305,7 @@ export default function ConsultationForm() {
                   </div>
 
                   <p className="text-[11px] text-center text-stone-400">
-                    🔒 Cam kết bảo mật thông tin. Khải Thiên chỉ liên hệ hỗ trợ chuyên môn nội thất.
+                    Cam kết bảo mật thông tin. Khải Thiên chỉ liên hệ hỗ trợ chuyên môn nội thất.
                   </p>
                 </form>
               )}
