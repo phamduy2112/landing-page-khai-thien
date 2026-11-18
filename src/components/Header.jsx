@@ -29,7 +29,7 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <a href="#he-thong-co-so" className="flex items-center gap-1.5 hover:text-amber-700 transition whitespace-nowrap">
               <MapPin className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-              <span>Trụ sở: {brandInfo.addressOffice}</span>
+              <span>Showroom: {brandInfo.addressOffice}</span>
             </a>
             <span className="flex items-center gap-1.5 whitespace-nowrap">
               <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
@@ -38,7 +38,7 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-4">
             <span className="inline-flex items-center gap-1.5 text-amber-700 font-semibold whitespace-nowrap">
-              <span>Cam kết giống 3D 99% • 100% Gỗ An Cường</span>
+              <span>Xưởng Sản Xuất Trực Tiếp • Thiết Kế & Thi Công Trọn Gói</span>
             </span>
           </div>
         </div>
