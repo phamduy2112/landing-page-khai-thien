@@ -1,32 +1,32 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Roadmap() {
   const steps = [
     {
       num: '01',
-      title: 'Khảo Sát 0đ',
-      desc: 'Đo đạc hiện trạng tận nơi & tư vấn mẫu ván An Cường phù hợp công năng.'
+      title: 'Tư Vấn & Khảo Sát',
+      desc: 'Tiếp nhận thông tin nhu cầu, khảo sát thực tế hiện trạng không gian và tư vấn giải pháp tối ưu trực tiếp tại công trình.'
     },
     {
       num: '02',
-      title: 'Thiết Kế 3D',
-      desc: 'Lên phối cảnh chuẩn gu gia chủ, chỉnh sửa đến khi hoàn toàn ưng ý.'
+      title: 'Lên Bản Vẽ Thiết Kế',
+      desc: 'Phát triển ý tưởng phối cảnh 3D nội - ngoại thất chuẩn gu thẩm mỹ và phong cách riêng biệt của gia chủ.'
     },
     {
       num: '03',
-      title: 'Báo Giá Chi Tiết',
-      desc: 'Bóc tách dự toán minh bạch theo m², cam kết 100% không phát sinh.'
+      title: 'Báo Giá Minh Bạch',
+      desc: 'Bóc tách khối lượng chi tiết từng hạng mục, thống nhất phương án vật liệu và ký kết hợp đồng rõ ràng.'
     },
     {
       num: '04',
       title: 'Sản Xuất Tại Xưởng',
-      desc: 'Cắt dán chỉ máy tự động tại xưởng riêng, kiểm tra mộng ghép kỹ càng.'
+      desc: 'Gia công trực tiếp tại xưởng sản xuất không qua trung gian, kiểm định chất lượng nghiêm ngặt trước khi xuất xưởng.'
     },
     {
       num: '05',
-      title: 'Lắp Đặt & Bàn Giao',
-      desc: 'Nghiệm thu chuẩn 3D, vệ sinh sạch sẽ và kích hoạt bảo hành 36 tháng.'
+      title: 'Thi Công & Bàn Giao',
+      desc: 'Lắp đặt hoàn thiện tận nơi tại TP.HCM, vệ sinh sạch sẽ, nghiệm thu bàn giao và kích hoạt bảo hành chu đáo.'
     },
   ];
 
@@ -36,12 +36,11 @@ export default function Roadmap() {
 
         {/* Header */}
         <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
-
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-[0.015em]">
-            5 Bước Làm Việc Trực Tiếp Với Xưởng
+            Quy Trình Làm Việc Tại Khải Thiên
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Kiểm soát chất lượng đồng bộ từ khâu đo đạc đến công trình thực tế
+            Đồng bộ và chuyên nghiệp trong từng công đoạn từ thiết kế đến thi công hoàn thiện
           </p>
         </div>
 

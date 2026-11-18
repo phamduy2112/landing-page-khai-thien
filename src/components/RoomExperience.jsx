@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sofa, Utensils, BedDouble, Shirt, Sparkles, ArrowRight } from 'lucide-react';
+import { Sofa, Utensils, BedDouble, ArrowRight } from 'lucide-react';
 
 export default function RoomExperience() {
   const rooms = [
@@ -8,27 +8,27 @@ export default function RoomExperience() {
       icon: Sofa,
       name: 'Phòng Khách',
       enName: 'LIVING ROOM SPACE',
-      materials: 'Ván MDF lõi xanh An Cường phủ Melamine, vách lam sóng & đá tự nhiên',
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85',
-      badge: 'Bộ Mặt Gia Chủ'
+      materials: 'Thiết kế sang trọng, tối ưu không gian sinh hoạt chung cho căn hộ, nhà phố và biệt thự.',
+      image: '../assets/bn_cate_1.webp',
+      badge: 'Điểm Nhấn Trung Tâm'
     },
     {
       id: 'kitchen',
       icon: Utensils,
       name: 'Phòng Bếp & Ăn',
       enName: 'KITCHEN & DINING',
-      materials: 'Thùng Picomat chịu nước 100%, cánh MDF Acrylic bóng gương No-line',
-      image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85',
-      badge: 'Chống Ẩm Tuyệt Đối'
+      materials: 'Bố trí công năng khoa học, hệ tủ bếp hiện đại, gọn gàng và tiện nghi tối đa cho gia chủ.',
+      image: '../assets/bn_cate_3.webp',
+      badge: 'Tiện Nghi Ấm Cúng'
     },
     {
       id: 'master-bedroom',
       icon: BedDouble,
       name: 'Phòng Ngủ Master',
       enName: 'MASTER BEDROOM SUITE',
-      materials: 'Gỗ An Cường vân sồi tự nhiên, giường bọc nỉ & vách ốp đầu giường',
-      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85',
-      badge: 'Thư Thái & Êm Dịu'
+      materials: 'Không gian nghỉ dưỡng riêng tư đẳng cấp với giường ngủ, tủ quần áo và tab đầu giường đồng bộ.',
+      image: '../assets/bn_cate_2.webp',
+      badge: 'Thư Thái & Riêng Tư'
     }
   ];
 
@@ -37,18 +37,17 @@ export default function RoomExperience() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="max-w-2xl mx-auto text-center space-y-2 mb-12">
-
+        <div className="max-w-2xl mx-auto text-center space-y-2 mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
-            Khám Phá Từng Không Gian Sống
+            Khám Phá Không Gian Sống
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Trải nghiệm các hạng mục nội thất may đo chuẩn kích thước thực tế
+            Trải nghiệm các hạng mục thiết kế và thi công nội thất thực tế từ Khải Thiên Furnishing
           </p>
         </div>
 
-        {/* 4 Room Cards Grid (2 Hàng x 2 Cột - Trắng ngà thanh lịch) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* Room Cards Grid (3 Cột cân đối) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {rooms.map((room) => {
             const Icon = room.icon;
 
@@ -57,12 +56,12 @@ export default function RoomExperience() {
                 key={room.id}
                 className="bg-white rounded-3xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
-                {/* Photo */}
-                <div className="relative h-60 sm:h-72 overflow-hidden bg-stone-100">
+                {/* Khung hình ảnh: Dùng tỷ lệ hoặc tự do chiều cao để lột tả trọn vẹn ảnh gốc */}
+                <div className="relative w-full bg-slate-900 overflow-hidden">
                   <img
                     src={room.image}
                     alt={room.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-[350px] object-fill group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
@@ -81,15 +80,15 @@ export default function RoomExperience() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-3">
-                  <div>
+                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                  <div className="space-y-1.5">
                     <span className="text-[10px] text-amber-700 font-bold uppercase tracking-widest block">
                       {room.enName}
                     </span>
-                    <h3 className="text-xl font-bold text-slate-900 mt-0.5">
+                    <h3 className="text-xl font-bold text-slate-900">
                       {room.name}
                     </h3>
-                    <p className="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
                       {room.materials}
                     </p>
                   </div>

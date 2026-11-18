@@ -15,6 +15,13 @@ export default function Footer() {
               <img src="/assets/Logo (4).png" alt={brandInfo.name} className="w-[190px]" />
             </div>
 
+            <p className="text-xs font-semibold text-slate-800 uppercase tracking-wide">
+              {brandInfo.companyName}
+            </p>
+            <p className="text-xs text-slate-600">
+              Mã số thuế: <span className="font-semibold text-slate-800">{brandInfo.taxCode}</span>
+            </p>
+
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pr-4 text-pretty">
               Đơn vị tiên phong trong giải pháp thiết kế sáng tạo và thi công nội thất trọn gói chất lượng cao tại TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh. Sở hữu xưởng sản xuất trực tiếp, cam kết giống 3D 99% và vật liệu An Cường 100%.
             </p>
@@ -34,13 +41,6 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-slate-900 block font-semibold">Showroom trưng bày:</strong>
-                  <span className="text-slate-600">{brandInfo.addressShowroom}</span>
-                </div>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                <div>
                   <strong className="text-slate-900 block font-semibold">Trụ sở & Văn phòng KTS:</strong>
                   <span className="text-slate-600">{brandInfo.addressOffice}</span>
                 </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                   href="#he-thong-co-so"
                   className="inline-flex items-center gap-1.5 text-xs text-amber-700 hover:text-amber-800 font-semibold transition"
                 >
-                  <span>Xem chi tiết cơ sở & chỉ đường Google Maps</span>
+                  <span>Xem chi tiết trụ sở & chỉ đường Google Maps</span>
                   <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
                 </a>
               </li>

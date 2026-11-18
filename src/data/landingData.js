@@ -5,10 +5,9 @@ export const brandInfo = {
   hotline1: "07 666666 33",
   hotline2: "0931 337 737",
   contactPerson: "Mr. Thành Tín",
-  email: "khaithienfurnishing@gmail.com",
+  email: "khaithienfurniture@gmail.com",
   website: "noithatkhaithien.com",
-  addressShowroom: "217 Ngô Gia Tự, Phường 3, Quận 10, TP. Hồ Chí Minh",
-  addressOffice: "606/112 Đường 3/2, Phường 14, Quận 10, TP. Hồ Chí Minh",
+  addressOffice: "129/8K Nguyễn Trãi, Phường Chợ Quán, TP. Hồ Chí Minh",
   zaloUrl: "https://zalo.me/0766666633",
   stats: [
     { value: "99%", label: "Chuẩn xác phối cảnh 3D", desc: "Từng đường nét, tỉ lệ & màu sắc vật liệu" },
@@ -261,81 +260,130 @@ export const commitmentsData = [
 // 7. Portfolio Dự Án Thực Tế
 export const portfolioData = [
   {
-    id: "masteri-3pn",
+    id: "alnata-celadon-city",
     category: "can-ho",
     categoryName: "Căn Hộ Chung Cư",
-    title: "Căn Hộ Masteri Centre Point",
-    subtitle: "Thiết kế hiện đại, tối ưu công năng mở kết nối phòng khách & bếp",
-    location: "Khu Đô Thị Vinhomes Grand Park, TP. Thủ Đức",
-    area: "98m²",
-    style: "Hiện Đại Sang Trọng (Modern Luxury)",
-    timeline: "28 Ngày Bàn Giao",
+    title: "THIẾT KẾ VÀ THI CÔNG NỘI THẤT CĂN HỘ 2 PHÒNG NGỦ ALNATA",
+    subtitle: "Phong cách Hiện đại pha trộn nét Wabi-Sabi mộc mạc, tối giản và tinh tế",
+    location: "Diamond Alnata – Celadon City, Quận Tân Phú, TP. Hồ Chí Minh",
+    area: "85m²",
+    style: "Hiện Đại pha Wabi-Sabi",
+    timeline: "Đang cập nhật",
     featured: true,
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85",
+    image: "../assets/g3 (1).webp",
     gallery: [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1000&q=80"
+      "../assets/g1.webp",
+      "../assets/g5 (1).webp",
+      "../assets/g7.webp",
+
     ],
-    material: "Gỗ MDF lõi xanh An Cường phủ Melamine & Acrylic bóng gương",
-    highlights: ["Hệ tủ bếp kịch trần Acrylic No-line", "Vách tivi lam sóng kết hợp đá Vicostone", "Tủ áo cánh kính viền nhôm Slim"]
+    material: "Vật liệu tự nhiên thô mộc (gỗ, đá, gốm sứ), tone màu be - xám - nâu đất kết hợp ánh sáng tự nhiên",
+    highlights: [
+      "Thiết kế tối giản với các đường nét bo tròn mềm mại, loại bỏ chi tiết rườm rà",
+      "Phối hợp hài hòa giữa phong cách Hiện đại và vẻ đẹp mộc mạc Wabi-Sabi",
+      "Tận dụng tối đa ánh sáng tự nhiên và cây xanh tạo không gian bình yên, tĩnh lặng",
+      "Phòng ngủ Master ấm áp với tone màu trung tính, ưu tiên công năng sử dụng"
+    ]
   },
   {
-    id: "cityland-parkhills",
-    category: "nha-pho",
-    categoryName: "Nhà Phố Liền Kề",
-    title: "Nhà Phố Cityland Park Hills",
-    subtitle: "Kiến tạo tổ ấm 3 thế hệ với gam màu gỗ sồi tự nhiên mộc mạc",
-    location: "Phường 10, Gò Vấp, TP.HCM",
-    area: "180m² (1 Trệt 2 Lầu)",
-    style: "Tối Giản Tinh Tế (Minimalism)",
-    timeline: "35 Ngày Bàn Giao",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85",
+    id: "can-ho-hau-giang",
+    category: "can-ho",
+    categoryName: "Căn Hộ Chung Cư",
+    title: "Thiết kế và Thi công Nội thất Căn hộ Hậu Giang",
+    subtitle: "Tối ưu không gian, hiện đại và tiện nghi theo sở thích riêng của gia chủ",
+    location: "Đường Hậu Giang, TP. Hồ Chí Minh",
+    area: "Đang cập nhật",
+    style: "Hiện Đại",
+    timeline: "Đang cập nhật",
+    featured: true,
+    image: "../assets/12.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
-    ],
-    material: "Gỗ sồi tự nhiên kết hợp ván chống ẩm sơn Inchem cao cấp",
-    highlights: ["Cầu thang xương cá bậc gỗ sồi", "Phòng khách liên thông giếng trời", "Hệ tủ âm tường thông minh"]
+      "../assets/13.webp",
+      "../assets/14.webp",
+      "../assets/15.webp",],
+    material: "Gam màu trắng kem, be, gỗ sáng kết hợp đá vân sáng và kính",
+    highlights: [
+      "Khảo sát hiện trạng thực tế kỹ lưỡng trước khi lên bản vẽ 3D thiết kế và thi công",
+      "Phòng khách nổi bật với sofa sắc cam đất tạo điểm nhấn cá tính cùng hệ lam gỗ đứng",
+      "Khu vực bếp chữ L tối ưu công năng, tủ trên cao sát trần và hệ tủ đồ khô ngăn nắp",
+      "Phòng ngủ Master đầu tư chỉn chu với hệ tủ quần áo kết hợp cánh kính và góc trang điểm cạnh cửa sổ"
+    ]
   },
   {
-    id: "chateau-villa",
+    id: "biet-thu-quan-binh-tan",
     category: "biet-thu",
     categoryName: "Biệt Thự & Villa",
-    title: "Biệt Thự Chateau Phú Mỹ Hưng",
-    subtitle: "Đẳng cấp xa hoa với phào chỉ dát vàng và đá cẩm thạch tự nhiên",
-    location: "Khu Đô Thị Phú Mỹ Hưng, Quận 7",
-    area: "320m²",
-    style: "Tân Cổ Điển Nhẹ Nhàng (Neo Classic)",
-    timeline: "45 Ngày Bàn Giao",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85",
+    title: "Thiết Kế & Thi Công Biệt Thự Tại Quận Bình Tân",
+    subtitle: "Giải pháp không gian sống đẳng cấp, sang trọng và tiện nghi cho gia đình đa thế hệ",
+    location: "Quận Bình Tân, TP. Hồ Chí Minh",
+    area: "Đang cập nhật",
+    style: "Hiện Đại Sang Trọng (Luxury)",
+    timeline: "Đang cập nhật",
+    featured: true,
+    image: "../assets/17.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+      "../assets/18.webp",
+      "../assets/19.webp",
+      "../assets/20.webp",
+      "../assets/21.webp",
+
     ],
-    material: "Ván chống ẩm cao cấp kết hợp đá tự nhiên & inox mạ vàng PVD",
-    highlights: ["Phòng ngủ Master phong cách hoàng gia", "Phòng thay đồ walk-in closet cao cấp", "Quầy bar rượu sang trọng"]
+    material: "Đá xuyên sáng cao cấp, đá Vicostone nhóm E, vách ốp sợi than tre, gỗ An Cường & inox mạ",
+    highlights: [
+      "Tầng hầm thiết kế đẳng cấp như showroom trưng bày xe với hệ trần nhôm và vách ốp ánh kim",
+      "Không gian phòng khách - bếp liên hoàn mở rộng, trang bị đảo bếp kết hợp quầy bar và đá Vicostone cao cấp",
+      "Quy mô đa tầng tối ưu công năng: Phòng tiệc thượng lưu, phòng ngủ Master tiêu chuẩn Suite 5 sao, phòng ngủ các con và phòng thờ trang nghiêm",
+      "Sân thượng tích hợp không gian tiểu cảnh xanh mát và khu vực tiệc BBQ ngoài trời lý tưởng"
+    ]
   },
   {
-    id: "sunrise-cityview",
+    id: "nha-pho-cmt8",
+    category: "nha-pho",
+    categoryName: "Nhà Phố",
+    title: "Lột Xác Nhà Phố Cũ 1 Trệt 2 Lầu Xuống Cấp Tại Đường CMT8",
+    subtitle: "Biến đổi không gian nhà ống cũ kỹ thành tổ ấm nhỏ xinh, ấm áp theo phong cách White Wabi-Sabi",
+    location: "Đường Cách Mạng Tháng 8, Quận 10 / Tân Bình, TP. Hồ Chí Minh",
+    area: "Đang cập nhật",
+    style: "White Wabi-Sabi",
+    timeline: "Đang cập nhật",
+    featured: true,
+    image: "../assets/22.webp",
+    gallery: [
+      "../assets/23.webp",
+      "../assets/24.webp",
+      "../assets/25.webp",
+    ],
+    material: "Sơn hiệu ứng trắng thạch cao/trắng kem, gỗ công nghiệp phủ Melamine mờ, cánh kính nghệ thuật",
+    highlights: [
+      "Xử lý triệt để kết cấu nhà ống cũ hẹp ngang, tối ưu ánh sáng và giải pháp không gian mở",
+      "Ứng dụng phong cách White Wabi-Sabi với các đường nét bo cong uyển chuyển, xóa nhòa góc chết",
+      "Tầng 1 thiết kế đa năng linh hoạt: Phòng sinh hoạt chung kết hợp phòng ngủ tiện nghi cho khách",
+      "Phòng ngủ Master tầng 2 tối ưu diện tích với giường phản sát tường, hộc kéo thông minh và tủ quần áo đụng trần vô hình"
+    ]
+  },
+  {
+    id: "vinhomes-grand-park-2pn",
     category: "can-ho",
     categoryName: "Căn Hộ Chung Cư",
-    title: "Căn Hộ Sunrise City View (2PN)",
-    subtitle: "Phong cách Japandi chữa lành với ánh sáng tự nhiên ngập tràn",
-    location: "Nguyễn Hữu Thọ, Quận 7, TP.HCM",
-    area: "76m²",
-    style: "Japandi Gần Gũi & Ấm Cúng",
-    timeline: "22 Ngày Bàn Giao",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85",
+    title: "Thiết kế và thi công nội thất căn hộ 2 PN Vinhomes Grand Park",
+    subtitle: "Phong cách Japandi kết hợp Wabi-Sabi mộc mạc, ấm cúng và tinh tế",
+    location: "Chung cư The Origami, Vinhomes Grand Park, TP. Thủ Đức, TP.HCM",
+    area: "65m²",
+    style: "Japandi & Wabi-Sabi",
+    timeline: "Đang cập nhật",
+    featured: true,
+    image: "../assets/vinhome-1.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&q=80"
+      "../assets/vinhome-2.webp",
+      "../assets/vinhome-3.webp",
     ],
-    material: "Gỗ công nghiệp An Cường phủ Melamine vân sồi mộc mạc",
-    highlights: ["Sàn gỗ công nghiệp xương cá", "Bàn ăn tròn mở rộng không gian", "Giường bục tích hợp ngăn kéo chứa đồ"]
+    material: "Gỗ công nghiệp MDF An Cường (mã 404 và 106 SH), sơn hiệu ứng cashmere (vải lụa)",
+    highlights: [
+      "Điểm nhấn mảng tường sơn hiệu ứng cashmere màu cam nổi bật sau tivi và bàn ăn",
+      "Khu vực bếp nhỏ gọn tích hợp đầy đủ phụ kiện, tủ đồ khô và bố trí khoa học",
+      "Phòng ngủ Master tối ưu không gian với giường gỗ, tủ quần áo cánh kính sọc lọng và bàn trang điểm",
+      "Phòng ngủ nhỏ hơn 9m² cho 2 bé sử dụng giường bục tích hợp hộc kéo và bàn học tiện ích"
+    ]
   }
 ];
 

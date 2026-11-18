@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, CheckCircle2, ShieldCheck, Clock, Award, Check } from 'lucide-react';
+import { Building2, CheckCircle2, ShieldCheck, Clock, Award } from 'lucide-react';
 
 export default function WhyChooseUs() {
   const commitments = [
@@ -7,29 +7,29 @@ export default function WhyChooseUs() {
       num: '01',
       icon: Building2,
       title: 'Xưởng Sản Xuất Trực Tiếp',
-      desc: 'Tiết kiệm 20% - 30% chi phí so với các đơn vị thương mại trung gian, quản lý chất lượng tận gốc.',
-      highlight: 'Tiết kiệm 20% - 30%'
+      desc: 'Chủ động từ khâu lên bản vẽ đến gia công lắp đặt tại xưởng riêng, tối ưu chi phí hiệu quả cho gia chủ.',
+      highlight: 'Xưởng Sản Xuất Riêng'
     },
     {
       num: '02',
       icon: CheckCircle2,
-      title: '100% Gỗ An Cường Chính Hãng',
-      desc: 'Cam kết bồi thường 200% nếu phát hiện vật liệu sai quy cách hoặc pha tạp gỗ kém chất lượng.',
-      highlight: 'Đền bù 200% nếu sai vật liệu'
+      title: 'Vật Liệu Chính Hãng, Chất Lượng',
+      desc: 'Cam kết sử dụng đúng chủng loại ván gỗ và phụ kiện cao cấp đã thỏa thuận, đảm bảo độ bền vững theo thời gian.',
+      highlight: 'Vật Liệu Minh Bạch'
     },
     {
       num: '03',
       icon: ShieldCheck,
-      title: 'Thi Công Chuẩn 3D Đến 99%',
-      desc: 'Sắc nét từ tỉ lệ hình khối, rãnh hắt sáng LED đến bề mặt vân gỗ đồng nhất với bản vẽ duyệt.',
-      highlight: 'Khớp 99% bản vẽ 3D'
+      title: 'Thi Công Sắc Nét, Chuẩn Thực Tế',
+      desc: 'Đội ngũ thợ tay nghề cao, tỉ mỉ trong từng đường nét gia công và lắp đặt hoàn thiện tại công trình.',
+      highlight: 'Tay Nghề Tận Tâm'
     },
     {
       num: '04',
       icon: Clock,
-      title: 'Bảo Hành 36 Tháng Tận Nơi',
-      desc: 'Bảo trì trọn đời, kỹ thuật viên xưởng có mặt hỗ trợ xử lý tận công trình trong vòng 24 giờ.',
-      highlight: 'Hỗ trợ kỹ thuật 24h'
+      title: 'Bảo Hành & Hậu Mãi Chu Đáo',
+      desc: 'Luôn đồng hành cùng khách hàng trong suốt quá trình sử dụng với chính sách bảo hành và hỗ trợ kỹ thuật tận nơi.',
+      highlight: 'Hậu Mãi Tận Tâm'
     }
   ];
 
@@ -44,9 +44,9 @@ export default function WhyChooseUs() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-stone-200/90 shadow-md group">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85"
-                alt="Khải Thiên Furniture - Tay nghề thợ mộc và chất lượng hoàn thiện"
-                className="w-full h-[460px] sm:h-[540px] object-cover group-hover:scale-105 transition-transform duration-700"
+                src="../assets/6.jpg"
+                alt="Khải Thiên Furnishing - Tay nghề thợ mộc và chất lượng hoàn thiện"
+                className="w-full h-[460px] sm:h-[540px] object-right object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
 
@@ -57,8 +57,8 @@ export default function WhyChooseUs() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-slate-900 tracking-wide uppercase">Bảo Chứng Khải Thiên</p>
-                    <p className="text-[11px] text-slate-600">Quy trình sản xuất khép kín • Nghiệm thu từng chi tiết</p>
+                    <p className="text-xs font-bold text-slate-900 tracking-wide uppercase">Khải Thiên Furnishing</p>
+                    <p className="text-[11px] text-slate-600">Thiết kế & Thi công nội - ngoại thất trọn gói</p>
                   </div>
                 </div>
               </div>
@@ -70,19 +70,17 @@ export default function WhyChooseUs() {
 
             {/* Header Cột Phải */}
             <div className="space-y-2">
-
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-[0.015em]">
-                4 Cam Kết Vàng Cho Mọi Gia Chủ
+                Lý Do Gia Chủ Tin Chọn Khải Thiên
               </h2>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                Minh bạch vật liệu, chuẩn xác tiến độ và chịu trách nhiệm đến cùng trên từng sản phẩm xuất xưởng.
+                Minh bạch trong từng hạng mục, chuẩn xác trong thi công và tận tâm trong dịch vụ hậu mãi.
               </p>
             </div>
 
             {/* Danh sách 4 Cam Kết - Dạng Stack ngang trực quan */}
             <div className="space-y-3.5">
               {commitments.map((item, idx) => {
-                const Icon = item.icon;
                 return (
                   <div
                     key={idx}

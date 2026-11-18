@@ -6,20 +6,20 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: 'Giá thi công tại xưởng Khải Thiên tiết kiệm được bao nhiêu?',
-      a: 'Khải Thiên trực tiếp sản xuất tại xưởng riêng, không qua các khâu thương mại trung gian nên giá thành thường tối ưu hơn 20% - 30% so với thị trường.'
+      q: 'Khải Thiên Furnishing chuyên thiết kế và thi công những hạng mục nào?',
+      a: 'Khải Thiên chuyên thiết kế và thi công trọn gói nội - ngoại thất cho căn hộ chung cư, nhà phố, biệt thự, villa, cũng như các không gian kinh doanh như quán cafe, bar, nhà hàng và showroom tại TP.HCM.'
     },
     {
-      q: 'Làm sao để tôi kiểm tra đúng 100% ván gỗ An Cường chính hãng?',
-      a: 'Quý khách được kiểm tra hóa đơn xuất kho An Cường và tem nhãn trực tiếp trên từng tấm ván khi vật tư nhập về xưởng hoặc khi lắp đặt tại nhà.'
+      q: 'Quy trình làm việc và thi công trọn gói diễn ra như thế nào?',
+      a: 'Quy trình gồm 5 bước: Tư vấn & khảo sát thực tế, lên bản vẽ thiết kế 3D, bóc tách báo giá minh bạch, sản xuất trực tiếp tại xưởng và tiến hành lắp đặt, bàn giao hoàn thiện tận nơi cho gia chủ.'
     },
     {
-      q: 'Thời gian thi công một căn hộ hoàn thiện mất bao lâu?',
-      a: 'Thời gian sản xuất tại xưởng từ 15 – 20 ngày và lắp đặt hoàn thiện tại công trình từ 3 – 5 ngày tùy theo khối lượng căn hộ.'
+      q: 'Thời gian hoàn thiện một dự án nội thất thường mất bao lâu?',
+      a: 'Thời gian gia công sản xuất tại xưởng và lắp đặt hoàn thiện sẽ tùy thuộc vào khối lượng thực tế, quy mô công trình cũng như mức độ phức tạp của bản vẽ thiết kế.'
     },
     {
-      q: 'Chính sách bảo hành và bảo trì nội thất như thế nào?',
-      a: 'Khải Thiên bảo hành kết cấu 36 tháng và bảo trì trọn đời. Kỹ thuật viên sẽ có mặt xử lý trong vòng 24h khi nhận được yêu cầu từ gia chủ.'
+      q: 'Chính sách bảo hành và hỗ trợ khách hàng của Khải Thiên ra sao?',
+      a: 'Khải Thiên luôn đồng hành cùng quý khách hàng trong suốt quá trình sử dụng với các chính sách bảo hành, bảo trì sản phẩm chu đáo và hỗ trợ kỹ thuật tận nơi khi cần thiết.'
     }
   ];
 
@@ -29,10 +29,12 @@ export default function FAQ() {
 
         {/* Header */}
         <div className="text-center space-y-2 mb-10">
-
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
             Câu Hỏi Thường Gặp
           </h2>
+          <p className="text-slate-600 text-xs sm:text-sm">
+            Giải đáp các thắc mắc phổ biến về dịch vụ thiết kế và thi công tại Khải Thiên Furnishing
+          </p>
         </div>
 
         {/* Accordions */}

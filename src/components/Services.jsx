@@ -9,23 +9,23 @@ export default function Services() {
       badge: 'Dịch Vụ Trọng Tâm',
       icon: Building2,
       title: 'Thiết Kế & Thi Công Trọn Gói',
-      desc: 'Giải pháp chìa khóa trao tay từ ý tưởng phối cảnh 3D độc bản đến trực tiếp sản xuất và lắp đặt hoàn thiện.',
-      tags: ['Căn hộ chung cư', 'Nhà phố & Shophouse', 'Biệt thự & Villa', 'Văn phòng sáng tạo'],
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
-      ctaText: 'Nhận Báo Giá Trọn Gói',
-      features: ['Khảo sát hiện trạng tận nơi 0đ', 'Giống 99% bản vẽ 3D đã duyệt']
+      desc: 'Giải pháp toàn diện từ khâu khảo sát hiện trạng, lên bản vẽ 3D đến sản xuất và hoàn thiện trực tiếp cho không gian sống và kinh doanh tại TP.HCM.',
+      tags: ['Biệt thự & Villa', 'Nhà phố & Căn hộ', 'Cải tạo nhà phố cũ', 'Quán Cafe & Showroom'],
+      image: '../assets/g4.webp',
+      ctaText: 'Nhận Tư Vấn Trọn Gói',
+      features: ['Thi công thực tế chuẩn bản vẽ 3D', 'Tối ưu chi phí trực tiếp từ xưởng']
     },
     {
       id: 'may-do',
       num: '02',
       badge: 'May Đo Trực Tiếp Tại Xưởng',
       icon: Hammer,
-      title: 'Sản Xuất Đồ Gỗ May Đo',
-      desc: 'Gia công chuẩn xác từng milimet theo kích thước thực tế tại xưởng riêng, cam kết 100% ván gỗ An Cường cao cấp.',
-      tags: ['Tủ bếp Acrylic No-line', 'Tủ áo cánh kính Slim LED', 'Giường & Vách ốp lam sóng', 'Bàn ăn & Sofa may đo'],
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85',
+      title: 'Sản Xuất Nội - Ngoại Thất May Đo',
+      desc: 'Gia công sản xuất trực tiếp theo chuẩn kích thước và phong cách riêng (Modern, Wabi Sabi, Minimalist), sử dụng vật liệu cao cấp.',
+      tags: ['Sofa & Bàn ăn', 'Hệ tủ áo & Tủ bếp', 'Giường ngủ cao cấp', 'Thi công theo bản vẽ riêng'],
+      image: '../assets/g5.webp',
       ctaText: 'Đặt May Đo Theo Yêu Cầu',
-      features: ['Tiết kiệm 20% - 30% giá xưởng', 'Bảo hành kết cấu 36 tháng']
+      features: ['Trực tiếp sản xuất không qua trung gian', 'Bảo hành kết cấu và hậu mãi chu đáo']
     }
   ];
 
@@ -35,12 +35,11 @@ export default function Services() {
 
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-2 mb-14">
-
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
             Dịch Vụ Cốt Lõi
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Giải pháp trọn gói và may đo trực tiếp tại xưởng sản xuất Khải Thiên
+            Giải pháp thiết kế trọn gói và sản xuất trực tiếp tại xưởng hơn 10 năm kinh nghiệm của Khải Thiên
           </p>
         </div>
 

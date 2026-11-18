@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { Sparkles, CheckCircle2, ArrowRight, SlidersHorizontal, Columns2, Building2 } from 'lucide-react';
+import { ArrowRight, SlidersHorizontal, Columns2, Building2, CheckCircle2 } from 'lucide-react';
 
 export default function BeforeAfterSection() {
   const [activeProjectIdx, setActiveProjectIdx] = useState(0);
@@ -10,22 +10,22 @@ export default function BeforeAfterSection() {
 
   const projects = [
     {
-      id: 'masteri',
-      title: 'Căn Hộ Masteri Centre Point (3PN)',
-      area: '110m²',
-      style: 'Modern Luxury',
-      render3D: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
-      reality: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85',
-      desc: 'Chuẩn xác từng milimet từ vân gỗ An Cường, hệ tủ kịch trần đến dải LED hắt âm vách.'
+      id: 'goldview-b',
+      title: 'Căn Hộ The GoldView – Block B (Q.4)',
+      area: 'Cải tạo phòng khách - bếp & ngủ',
+      style: 'Hiện Đại - Tối Ưu Công Năng',
+      render3D: '../assets/Phong_khach_TRUOC.png',
+      reality: '../assets/Phong_khach_SAU.png',
+      desc: 'Tối ưu sảnh vào tủ giày sát trần, quầy bar mini chia không gian bếp và hệ tủ trang trí cánh kính âm LED sang trọng.'
     },
     {
-      id: 'cityland',
-      title: 'Nhà Phố Liền Kề Cityland Park Hills',
-      area: '180m²',
-      style: 'Hiện Đại Tối Giản',
-      render3D: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85',
-      reality: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85',
-      desc: 'Không gian phòng khách - bếp liền mạch, bề mặt ván chống ẩm lõi xanh hoàn thiện sắc nét.'
+      id: 'goldview-2pn',
+      title: 'Căn Hộ The GoldView (2PN - Quận 4)',
+      area: '110m²',
+      style: 'Hiện Đại - Độc Lạ Nam Tính',
+      render3D: '../assets/Phong_khach_truoc_01.jpg',
+      reality: '../assets/Phong_khach_sau_01.webp',
+      desc: 'Cải tạo trọn gói căn hộ cũ xuống cấp: Ốp vách than tre kết hợp cửa giấu khuôn, hệ tủ bếp song song đảo bếp tích hợp phụ kiện inox, tủ cánh kính trưng bày Labubu tinh tế.'
     }
   ];
 
@@ -55,12 +55,11 @@ export default function BeforeAfterSection() {
 
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center space-y-2 mb-10">
-
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
             Bản Vẽ 3D vs Thực Tế Bàn Giao
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Kéo thanh trượt hoặc chuyển chế độ để so sánh độ chuẩn xác từng chi tiết
+            Kéo thanh trượt hoặc chuyển chế độ để so sánh độ chuẩn xác từng chi tiết thi công từ xưởng Khải Thiên
           </p>
         </div>
 
@@ -74,8 +73,8 @@ export default function BeforeAfterSection() {
                 type="button"
                 onClick={() => setActiveProjectIdx(idx)}
                 className={`py-2 px-4 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer flex items-center gap-2 ${activeProjectIdx === idx
-                    ? 'bg-slate-900 text-amber-400 shadow-md'
-                    : 'bg-white text-slate-600 hover:text-slate-900 border border-stone-200 hover:bg-stone-50'
+                  ? 'bg-slate-900 text-amber-400 shadow-md'
+                  : 'bg-white text-slate-600 hover:text-slate-900 border border-stone-200 hover:bg-stone-50'
                   }`}
               >
                 <Building2 className="w-3.5 h-3.5 shrink-0" />
@@ -157,14 +156,14 @@ export default function BeforeAfterSection() {
               {/* Badges on image */}
               <div className="absolute top-5 left-5 z-10 pointer-events-none">
                 <span className="px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-900/90 backdrop-blur-md border border-white/10 text-amber-400 shadow">
-                  🎨 3D Phối Cảnh Duyệt
+                  🎨 3D Phối Cảnh Khải Thiên
                 </span>
               </div>
 
               <div className="absolute top-5 right-5 z-10 pointer-events-none">
                 <span className="px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-emerald-600/95 backdrop-blur-md text-white shadow flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Thực Tế Nghiệm Thu (99%)</span>
+                  <span>Thực Tế Bàn Giao</span>
                 </span>
               </div>
 
@@ -177,13 +176,13 @@ export default function BeforeAfterSection() {
             {/* Project Info Bar */}
             <div className="p-4 sm:p-5 rounded-2xl bg-white border border-stone-200/90 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <h4 className="text-base font-bold text-slate-900 flex items-center gap-2">
+                <h4 className="text-base font-bold text-slate-900 flex flex-wrap items-center gap-2">
                   <span>{current.title}</span>
                   <span className="text-xs bg-amber-100 text-amber-800 border border-amber-200 px-2 py-0.5 rounded font-semibold">
                     {current.style} • {current.area}
                   </span>
                 </h4>
-                <p className="text-xs text-slate-600 mt-0.5">
+                <p className="text-xs text-slate-600 mt-1">
                   {current.desc}
                 </p>
               </div>
@@ -192,7 +191,7 @@ export default function BeforeAfterSection() {
                 href="#consultation"
                 className="inline-flex items-center gap-2 py-2.5 px-5 rounded-xl bg-slate-900 hover:bg-amber-600 text-white text-xs font-bold transition shadow shrink-0"
               >
-                <span>Nhận Báo Giá 3D Tương Tự</span>
+                <span>Tư Vấn Cải Tạo Căn Hộ</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -213,7 +212,7 @@ export default function BeforeAfterSection() {
                     🎨 Phối Cảnh 3D Đã Duyệt
                   </div>
                 </div>
-                <p className="text-center text-xs text-slate-600 font-medium">Bản thiết kế mặt bằng & góc nhìn phối cảnh 3D ban đầu</p>
+                <p className="text-center text-xs text-slate-600 font-medium">Bản thiết kế phương án cải tạo công năng 3D</p>
               </div>
 
               {/* Reality Card */}
@@ -226,13 +225,13 @@ export default function BeforeAfterSection() {
                   />
                   <div className="absolute top-4 left-4 bg-emerald-600/95 backdrop-blur-md px-3.5 py-1.5 rounded-lg text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>Thực Tế Nghiệm Thu (Khớp 99%)</span>
+                    <span>Thực Tế Hoàn Thiện</span>
                   </div>
                   <div className="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur-md px-3 py-1 rounded-md text-amber-400 text-xs font-bold">
-                    100% Gỗ An Cường
+                    Trực tiếp từ xưởng Khải Thiên
                   </div>
                 </div>
-                <p className="text-center text-xs text-amber-800 font-semibold">Công trình thi công thực tế bởi thợ xưởng Khải Thiên</p>
+                <p className="text-center text-xs text-amber-800 font-semibold">Công trình thi công thực tế tại The GoldView Block B</p>
               </div>
             </div>
 
@@ -246,7 +245,7 @@ export default function BeforeAfterSection() {
                 href="#consultation"
                 className="inline-flex items-center gap-2 py-2.5 px-5 rounded-xl bg-slate-900 hover:bg-amber-600 text-white text-xs font-bold transition shadow shrink-0"
               >
-                <span>Nhận Báo Giá 3D Tương Tự</span>
+                <span>Nhận Báo Giá Tương Tự</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

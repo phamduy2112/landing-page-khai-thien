@@ -9,7 +9,7 @@ export default function ConsultationForm() {
     propertyType: 'Căn hộ chung cư',
     area: '',
     style: 'Hiện đại (Modern Luxury)',
-    materialInterest: 'Ván chống ẩm An Cường lõi xanh',
+    materialInterest: 'Ván gỗ công nghiệp cao cấp',
     consultationLocation: 'Tại căn hộ / công trình thực tế',
     notes: '',
   });
@@ -60,7 +60,7 @@ export default function ConsultationForm() {
       propertyType: 'Căn hộ chung cư',
       area: '',
       style: 'Hiện đại (Modern Luxury)',
-      materialInterest: 'Ván chống ẩm An Cường lõi xanh',
+      materialInterest: 'Ván gỗ công nghiệp cao cấp',
       consultationLocation: 'Tại căn hộ / công trình thực tế',
       notes: '',
     });
@@ -78,27 +78,27 @@ export default function ConsultationForm() {
           <div className="lg:col-span-5 space-y-5">
 
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance">
-              Nhận Phối Cảnh 3D & Báo Giá Xưởng
+              Nhận Tư Vấn & Báo Giá Trực Tiếp Từ Xưởng
             </h2>
 
             <p className="text-slate-600 text-sm leading-relaxed text-pretty">
-              KTS Khải Thiên liên hệ tư vấn giải pháp bám sát ngân sách và mang mẫu ván An Cường khảo sát tận nơi miễn phí.
+              Đội ngũ kiến trúc sư Khải Thiên sẵn sàng hỗ trợ khảo sát, tư vấn giải pháp không gian và báo giá chi tiết cho công trình của bạn.
             </p>
 
             <div className="space-y-3 pt-1">
               <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Khảo sát & đo đạc hiện trạng tận nơi 0đ</span>
+                <span>Khảo sát hiện trạng và tư vấn tận nơi tại TP.HCM</span>
               </div>
 
               <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
                 <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
-                <span>Trực tiếp xem mẫu ván An Cường chính hãng</span>
+                <span>Sản xuất trực tiếp tại xưởng tối ưu chi phí</span>
               </div>
 
               <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
                 <PhoneCall className="w-4 h-4 text-blue-600 shrink-0" />
-                <span>Báo giá bóc tách chi tiết không phát sinh</span>
+                <span>Bố trí công năng và vật liệu theo đúng nhu cầu</span>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function ConsultationForm() {
                     Gửi Yêu Cầu Thành Công!
                   </h3>
                   <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                    Cảm ơn bạn đã tin tưởng <strong>Khải Thiên Furnishing</strong>. Kiến trúc sư tư vấn sẽ gọi đến số <strong>{formData.phone}</strong> trong vòng 30 phút để hỗ trợ bạn giải pháp tốt nhất.
+                    Cảm ơn bạn đã quan tâm đến dịch vụ của <strong>Khải Thiên Furnishing</strong>. Chuyên viên tư vấn sẽ liên hệ đến số <strong>{formData.phone}</strong> trong thời gian sớm nhất để hỗ trợ thông tin chi tiết.
                   </p>
                   <div className="pt-4">
                     <button
@@ -132,10 +132,10 @@ export default function ConsultationForm() {
                 <form onSubmit={handleSubmit} noValidate className="space-y-5">
                   <div className="border-b border-stone-100 pb-4">
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                      Phiếu Đăng Ký Tư Vấn & Nhận Mẫu 3D
+                      Đăng Ký Tư Vấn Nội - Ngoại Thất
                     </h3>
                     <p className="text-xs text-stone-500 mt-1">
-                      Vui lòng điền thông tin để đội ngũ kỹ sư Khải Thiên chuẩn bị trước bảng bóc tách giá gốc xưởng.
+                      Vui lòng để lại thông tin để Khải Thiên hỗ trợ tư vấn giải pháp không gian phù hợp nhất.
                     </p>
                   </div>
 
@@ -175,7 +175,7 @@ export default function ConsultationForm() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="VD: 0931 337 737"
+                        placeholder="VD: 076 666 6633"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.phone
                           ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
                           : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
@@ -206,8 +206,8 @@ export default function ConsultationForm() {
                         <option value="Căn hộ chung cư">Căn hộ chung cư</option>
                         <option value="Nhà phố liền kề">Nhà phố liền kề</option>
                         <option value="Biệt thự / Villa">Biệt thự / Villa</option>
-                        <option value="Cải tạo phòng khách / Bếp lẻ">Cải tạo phòng khách / Bếp lẻ</option>
-                        <option value="Văn phòng / Shop kinh doanh">Văn phòng / Shop kinh doanh</option>
+                        <option value="Quán Cafe / Nhà hàng">Quán Cafe / Nhà hàng</option>
+                        <option value="Văn phòng / Showroom">Văn phòng / Showroom</option>
                       </select>
                     </div>
 
@@ -250,7 +250,7 @@ export default function ConsultationForm() {
 
                     <div>
                       <label htmlFor="materialInterest" className="block text-xs font-bold text-slate-700 mb-1.5">
-                        Chất liệu quan tâm
+                        Hạng mục quan tâm
                       </label>
                       <select
                         id="materialInterest"
@@ -259,10 +259,10 @@ export default function ConsultationForm() {
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100"
                       >
-                        <option value="Ván chống ẩm An Cường lõi xanh">Ván chống ẩm An Cường lõi xanh</option>
-                        <option value="Cánh Acrylic No-line bóng gương">Cánh Acrylic No-line bóng gương</option>
-                        <option value="Cánh kính viền nhôm Slim đèn LED">Cánh kính viền nhôm Slim đèn LED</option>
-                        <option value="Gỗ sồi tự nhiên kết hợp chống ẩm">Gỗ sồi tự nhiên kết hợp chống ẩm</option>
+                        <option value="Thiết kế & thi công trọn gói">Thiết kế & thi công trọn gói</option>
+                        <option value="Sản xuất đồ gỗ may đo theo yêu cầu">Sản xuất đồ gỗ may đo theo yêu cầu</option>
+                        <option value="Tủ bếp & Tủ áo cao cấp">Tủ bếp & Tủ áo cao cấp</option>
+                        <option value="Nội - Ngoại thất kinh doanh (Cafe, Shop)">Nội - Ngoại thất kinh doanh (Cafe, Shop)</option>
                       </select>
                     </div>
                   </div>
@@ -270,7 +270,7 @@ export default function ConsultationForm() {
                   {/* Ghi chú thêm */}
                   <div>
                     <label htmlFor="notes" className="block text-xs font-bold text-slate-700 mb-1.5">
-                      Ghi chú thêm về yêu cầu hoặc thời gian nhận nhà
+                      Ghi chú thêm về yêu cầu hoặc thời gian mong muốn
                     </label>
                     <textarea
                       id="notes"
@@ -278,7 +278,7 @@ export default function ConsultationForm() {
                       rows="2"
                       value={formData.notes}
                       onChange={handleChange}
-                      placeholder="VD: Cần tư vấn tủ bếp cánh kính và hệ tủ áo kịch trần..."
+                      placeholder="VD: Cần tư vấn thiết kế thi công trọn gói căn hộ 2 phòng ngủ..."
                       className="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100 resize-none"
                     />
                   </div>
@@ -293,11 +293,11 @@ export default function ConsultationForm() {
                       {status === 'submitting' ? (
                         <>
                           <Loader2 className="w-5 h-5 animate-spin shrink-0" />
-                          <span className="whitespace-nowrap">Đang gửi thông tin đến kiến trúc sư...</span>
+                          <span className="whitespace-nowrap">Đang gửi thông tin đến Khải Thiên...</span>
                         </>
                       ) : (
                         <>
-                          <span>GỬI YÊU CẦU & NHẬN PHỐI CẢNH 3D MIỄN&nbsp;PHÍ</span>
+                          <span>GỬI YÊU CẦU TƯ VẤN & BÁO GIÁ</span>
                           <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
                         </>
                       )}
@@ -305,7 +305,7 @@ export default function ConsultationForm() {
                   </div>
 
                   <p className="text-[11px] text-center text-stone-400">
-                    🔒 Cam kết bảo mật 100% dữ liệu. Khải Thiên chỉ liên hệ tư vấn chuyên môn nội thất.
+                    🔒 Cam kết bảo mật thông tin. Khải Thiên chỉ liên hệ hỗ trợ chuyên môn nội thất.
                   </p>
                 </form>
               )}
