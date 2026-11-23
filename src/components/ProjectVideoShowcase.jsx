@@ -84,6 +84,7 @@ function getVideoMedia(item) {
   };
 }
 
+
 export default function ProjectVideoShowcase() {
   const [activeVideo, setActiveVideo] = useState(videoList[0]);
   const currentMedia = getVideoMedia(activeVideo);
