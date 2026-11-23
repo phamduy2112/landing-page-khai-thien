@@ -73,13 +73,21 @@ export default function Services() {
                         <span>{service.badge}</span>
                       </div>
 
-                      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs">
-                        <span className="font-bold bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10">
-                          Xưởng sản xuất Khải Thiên
-                        </span>
-                        <span className="text-white font-semibold bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
-                          100% Gỗ An Cường
-                        </span>
+                      {/* Bottom Single Unified Status Bar */}
+                      <div className="absolute bottom-3  sm:bottom-4 inset-x-3 sm:inset-x-4">
+                        <div className="bg-slate-950/85
+                          
+                          backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 flex items-center justify-between text-white text-[11px] sm:text-xs
+                         
+                          ">
+                          <span className="font-bold flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                            <span>Xưởng sản xuất Khải Thiên</span>
+                          </span>
+                          <span className="text-stone-300 font-medium border-l border-white/20 pl-3">
+                            100% Gỗ An Cường
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
