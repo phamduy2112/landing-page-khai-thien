@@ -116,20 +116,31 @@ export default function ProjectVideoShowcase() {
           <div className="lg:col-span-8 bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col justify-between w-full">
             <div className="w-full relative bg-black flex items-center justify-center overflow-hidden h-[60vh] sm:h-[460px] md:h-[500px] lg:aspect-video">
               {currentMedia.type === 'iframe' ? (
-                <iframe
-                  key={currentMedia.embedUrl}
-                  src={currentMedia.embedUrl}
-                  className="w-full h-full border-0 absolute inset-0"
-                  allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  title={activeVideo.title}
-                />
+                /* Với Google Drive iframe, dùng scale và translateY nhẹ để giấu hoàn toàn thanh header bar & control icons */
+                <div className="relative w-full h-full overflow-hidden bg-black">
+                  <iframe
+                    key={currentMedia.embedUrl}
+                    src={currentMedia.embedUrl}
+                    className="w-full border-0 absolute left-0 right-0"
+                    style={{
+                      height: 'calc(100% + 56px)',
+                      top: '-56px'
+                    }}
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    title={activeVideo.title}
+                  />
+                </div>
               ) : (
                 <video
                   key={currentMedia.embedUrl}
-                  controls
                   playsInline
                   autoPlay
+                  muted
+                  loop
+                  controls
+                  controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
+                  disablePictureInPicture
                   preload="metadata"
                   poster={currentMedia.thumbnail}
                   className="w-full h-full object-cover bg-black"
