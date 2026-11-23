@@ -11,10 +11,10 @@ export default function InfiniteGalleryWall() {
 
   // Bộ lọc danh mục công trình
   const categories = [
-    { id: 'ALL', label: 'Tất Cả Dự Án', count: 18 },
+    { id: 'ALL', label: 'Tất Cả Dự Án', count: 19 },
     { id: 'Căn Hộ', label: 'Căn Hộ Chung Cư', count: 7 },
     { id: 'Nhà Phố', label: 'Nhà Phố', count: 5 },
-    { id: 'Biệt Thự', label: 'Biệt Thự', count: 1 },
+    { id: 'Biệt Thự', label: 'Biệt Thự', count: 2 },
     { id: 'Phòng Ngủ', label: 'Phòng Ngủ Master', count: 3 },
     { id: 'Showroom', label: 'Showroom & Shop', count: 2 },
   ];
