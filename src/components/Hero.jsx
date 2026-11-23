@@ -30,20 +30,16 @@ export default function Hero() {
             {/* 4 Cam kết ngắn gọn */}
             <div className="grid grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-slate-700 font-medium max-w-lg">
               <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-stone-200/80 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-stone-900 shrink-0" />
-                <span>Xưởng sản xuất trực tiếp</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check lucide-check-circle-2 w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>                <span>Xưởng sản xuất trực tiếp</span>
               </div>
               <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-stone-200/80 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-stone-900 shrink-0" />
-                <span>Thi công trọn gói uy tín</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check lucide-check-circle-2 w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>                <span>Thi công trọn gói uy tín</span>
               </div>
               <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-stone-200/80 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-stone-900 shrink-0" />
-                <span>May đo theo yêu cầu riêng</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check lucide-check-circle-2 w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>                <span>May đo theo yêu cầu riêng</span>
               </div>
               <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-stone-200/80 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-stone-900 shrink-0" />
-                <span>Bảo hành & hậu mãi chu đáo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check lucide-check-circle-2 w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>                <span>Bảo hành & hậu mãi chu đáo</span>
               </div>
             </div>
 
@@ -91,44 +87,44 @@ export default function Hero() {
                   href="#project-videos"
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 bg-black/85 hover:bg-black text-white backdrop-blur-md px-4 py-3 rounded-2xl border border-white/20 shadow-2xl transition-all duration-300 group-hover:scale-105 cursor-pointer z-10"
                 >
-                    <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white text-black shadow-md">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-xl bg-white/40 opacity-75" />
-                      <Play className="w-4 h-4 fill-current ml-0.5" />
-                    </span>
-                    <div className="text-left pr-1">
-                      <p className="text-[11px] font-bold text-stone-300 uppercase tracking-wider">Xem Thước Phim</p>
-                      <p className="text-xs font-bold text-white">Bàn Giao Thực Tế</p>
-                    </div>
+                  <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white text-black shadow-md">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-xl bg-white/40 opacity-75" />
+                    <Play className="w-4 h-4 fill-current ml-0.5" />
+                  </span>
+                  <div className="text-left pr-1">
+                    <p className="text-[11px] font-bold text-stone-300 uppercase tracking-wider">Xem Thước Phim</p>
+                    <p className="text-xs font-bold text-white">Bàn Giao Thực Tế</p>
+                  </div>
                 </a>
 
                 {/* Overlaid Tag */}
-                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/85 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] text-stone-300 font-bold uppercase tracking-wider">Thi công thực tế</p>
-                      <h4 className="text-sm font-bold text-white">Biệt Thự, Nhà Phố & Căn Hộ</h4>
-                    </div>
-                      <span className="text-[11px] bg-white text-black font-extrabold px-2.5 py-1 rounded-lg shadow-sm">
-                        Khải Thiên Furnishing
-                      </span>
+                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/85 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
+                  <div>
+                    <p className="text-[10px] text-stone-300 font-bold uppercase tracking-wider">Thi công thực tế</p>
+                    <h4 className="text-sm font-bold text-white">Biệt Thự, Nhà Phố & Căn Hộ</h4>
                   </div>
+                  <span className="text-[11px] bg-white text-black font-extrabold px-2.5 py-1 rounded-lg shadow-sm">
+                    Khải Thiên Furnishing
+                  </span>
                 </div>
-
-                {/* Floating Badge - Xưởng */}
-                <div className="absolute -top-4 -left-4 bg-white p-3 rounded-2xl shadow-xl border border-stone-200 flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-stone-100 text-stone-900 flex items-center justify-center font-bold border border-stone-300 shrink-0">
-                    <Building2 className="w-5 h-5" />
-                  </div>
-                  <div className="text-left pr-1 whitespace-nowrap">
-                    <p className="text-xs font-extrabold text-slate-900">Xưởng Trực Tiếp</p>
-                    <p className="text-[10px] text-stone-900 font-semibold">Thi Công Trọn Gói</p>
-                  </div>
-                </div>
-
               </div>
-            </div>
 
+              {/* Floating Badge - Xưởng */}
+              <div className="absolute -top-4 -left-4 bg-white p-3 rounded-2xl shadow-xl border border-stone-200 flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-stone-100 text-stone-900 flex items-center justify-center font-bold border border-stone-300 shrink-0">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <div className="text-left pr-1 whitespace-nowrap">
+                  <p className="text-xs font-extrabold text-slate-900">Xưởng Trực Tiếp</p>
+                  <p className="text-[10px] text-stone-900 font-semibold">Thi Công Trọn Gói</p>
+                </div>
+              </div>
+
+            </div>
           </div>
+
         </div>
+      </div>
     </section>
   );
 }

@@ -1,16 +1,60 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Eye, X, ChevronLeft, ChevronRight, Sparkles, MapPin, ArrowUpRight } from 'lucide-react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { Eye, X, ChevronLeft, ChevronRight, Sparkles, MapPin, ArrowUpRight, Filter, LayoutGrid } from 'lucide-react';
 import { allGallerySpaces } from '../data/gallerySpacesData';
 
 export default function InfiniteGalleryWall() {
   const [activeSpace, setActiveSpace] = useState(null);
   const [currentPhotoIdx, setCurrentPhotoIdx] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('ALL');
+  const [selectedStyle, setSelectedStyle] = useState('ALL');
   const thumbScrollRef = useRef(null);
 
-  // Hàng trên: Dự án từ 1 đến 8
+  // Bộ lọc danh mục công trình
+  const categories = [
+    { id: 'ALL', label: 'Tất Cả Dự Án', count: 18 },
+    { id: 'Căn Hộ', label: 'Căn Hộ Chung Cư', count: 7 },
+    { id: 'Nhà Phố', label: 'Nhà Phố', count: 5 },
+    { id: 'Biệt Thự', label: 'Biệt Thự', count: 1 },
+    { id: 'Phòng Ngủ', label: 'Phòng Ngủ Master', count: 3 },
+    { id: 'Showroom', label: 'Showroom & Shop', count: 2 },
+  ];
+
+  // Bộ lọc phong cách thiết kế
+  const styleFilters = [
+    { id: 'ALL', label: 'Mọi Phong Cách' },
+    { id: 'Hiện Đại', label: 'Hiện Đại (Modern)' },
+    { id: 'Wabi-Sabi', label: 'Wabi-Sabi & Japandi' },
+    { id: 'Luxury', label: 'Luxury & Đá Tự Nhiên' },
+    { id: 'Tối Giản', label: 'Tối Ưu & Tối Giản' },
+  ];
+
+  // Lọc dữ liệu theo cả Danh mục và Phong cách
+  const filteredSpaces = useMemo(() => {
+    return allGallerySpaces.filter((item) => {
+      // Lọc category
+      const matchCategory = selectedCategory === 'ALL' || item.tag === selectedCategory;
+
+      // Lọc style
+      let matchStyle = true;
+      if (selectedStyle === 'Hiện Đại') {
+        matchStyle = item.style.includes('Hiện Đại') || item.style.includes('Năng Động');
+      } else if (selectedStyle === 'Wabi-Sabi') {
+        matchStyle = item.style.includes('Wabi') || item.style.includes('Japandi') || item.style.includes('Trắng Kem');
+      } else if (selectedStyle === 'Luxury') {
+        matchStyle = item.style.includes('Luxury') || item.style.includes('Vương Giả') || item.style.includes('Calacatta') || item.style.includes('Đèn LED');
+      } else if (selectedStyle === 'Tối Giản') {
+        matchStyle = item.style.includes('Tối Ưu') || item.style.includes('Chuẩn E1') || item.style.includes('Giường Bục');
+      }
+
+      return matchCategory && matchStyle;
+    });
+  }, [selectedCategory, selectedStyle]);
+
+  const isFiltering = selectedCategory !== 'ALL' || selectedStyle !== 'ALL';
+
+  // Hàng trên & hàng dưới cho chế độ vô tận mặc định (khi không lọc)
   const row1 = allGallerySpaces.slice(0, 8);
-  // Hàng dưới: Dự án từ 9 đến 18 (10 dự án)
-  const row2 = allGallerySpaces.slice(8, 18);
+  const row2 = allGallerySpaces.slice(8, 20);
 
   const handleOpenSpace = (space) => {
     setActiveSpace(space);
@@ -55,8 +99,11 @@ export default function InfiniteGalleryWall() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full pointer-events-none" />
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center relative z-10">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center relative z-10">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900 text-white text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+          <Sparkles className="w-3.5 h-3.5 text-stone-300" />
+          <span>Thư Viện Công Trình Bàn Giao</span>
+        </div>
 
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
           Dấu Ấn Công Trình{" "}
@@ -64,131 +111,272 @@ export default function InfiniteGalleryWall() {
         </h2>
 
         <p className="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
-          Khám phá hơn 300 hình ảnh từ 18 công trình thiết kế và thi công
-          nội thất tiêu biểu của Khải Thiên Furnishing tại TP.HCM.
-          Mỗi không gian là một câu chuyện về sự sáng tạo, chất lượng
-          hoàn thiện và tâm huyết trong từng chi tiết.
-
+          Khám phá hơn 440 hình ảnh thực tế từ 18 công trình thiết kế và thi công
+          tiêu biểu của Khải Thiên Furnishing tại TP.HCM. Bấm vào từng dự án để xem trọn vẹn album ảnh thi công.
         </p>
 
-      </div>
-
-      {/* 2 Rows Infinite Marquee Wall */}
-      <div className="space-y-4 sm:space-y-6 relative z-10 select-none">
-
-        {/* ROW 1: Dự án 1 -> 8 (Trôi sang trái) */}
-        <div className="overflow-hidden w-full flex">
-          <div className="animate-marquee-left pause-hover flex gap-4 sm:gap-6">
-            {[...row1, ...row1].map((item, idx) => (
-              <div
-                key={`r1-${item.id}-${idx}`}
-                onClick={() => handleOpenSpace(item)}
-                className="group relative w-72 sm:w-88 md:w-96 h-48 sm:h-56 md:h-64 rounded-2xl overflow-hidden shrink-0 cursor-pointer border border-stone-200/90 hover:border-stone-900 transition-all duration-300 shadow-sm hover:shadow-xl bg-white"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = '/assets/banner.webp';
-                  }}
-                />
-
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
-
-                {/* Top Badge: Số thứ tự + Tag + Số ảnh */}
-                <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
-                  <span className="text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-black text-white border border-stone-800 shadow-sm">
-                    #{item.num < 10 ? `0${item.num}` : item.num}
+        {/* BỘ LỌC PHONG CÁCH & LOẠI HÌNH CÔNG TRÌNH */}
+        <div className="mt-8 space-y-3.5 max-w-4xl mx-auto">
+          {/* Hàng 1: Loại hình công trình */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {categories.map((cat) => {
+              const active = selectedCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer flex items-center gap-1.5 border ${active
+                    ? 'bg-black text-white border-black shadow-md scale-105'
+                    : 'bg-white text-slate-700 border-stone-200 hover:border-black hover:text-black'
+                    }`}
+                >
+                  <span>{cat.label}</span>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${active ? 'bg-stone-800 text-stone-200' : 'bg-stone-100 text-slate-500'
+                    }`}>
+                    {cat.count}
                   </span>
-                  <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-black/90 backdrop-blur-md text-white border border-stone-700">
-                    {item.tag}
-                  </span>
-                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-black/75 text-white border border-stone-800/80">
-                    {item.album.length} ảnh
-                  </span>
-                </div>
-
-                {/* Hover Eye Icon */}
-                <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full bg-stone-900 text-white shadow-md">
-                  <ArrowUpRight className="w-4 h-4" />
-                </div>
-
-                {/* Bottom Info */}
-                <div className="absolute bottom-0 inset-x-0 p-4 z-10 space-y-1">
-                  <div className="flex items-center gap-1 text-[11px] text-white font-medium">
-                    <MapPin className="w-3 h-3 shrink-0" />
-                    <span>{item.location}</span>
-                  </div>
-                  <h4 className="text-xs sm:text-sm font-bold text-white transition-colors truncate">
-                    {item.title}
-                  </h4>
-                </div>
-              </div>
-            ))}
+                </button>
+              );
+            })}
           </div>
-        </div>
 
-        {/* ROW 2: Dự án 9 -> 18 (Trôi sang phải) */}
-        <div className="overflow-hidden w-full flex">
-          <div className="animate-marquee-right pause-hover flex gap-4 sm:gap-6">
-            {[...row2, ...row2].map((item, idx) => (
-              <div
-                key={`r2-${item.id}-${idx}`}
-                onClick={() => handleOpenSpace(item)}
-                className="group relative w-72 sm:w-88 md:w-96 h-48 sm:h-56 md:h-64 rounded-2xl overflow-hidden shrink-0 cursor-pointer border border-stone-200/90 hover:border-stone-900 transition-all duration-300 shadow-sm hover:shadow-xl bg-white"
+          {/* Hàng 2: Phong cách nội thất */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+            <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider mr-1 hidden sm:inline-block">
+              Phong cách:
+            </span>
+            {styleFilters.map((st) => {
+              const active = selectedStyle === st.id;
+              return (
+                <button
+                  key={st.id}
+                  onClick={() => setSelectedStyle(st.id)}
+                  className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer border ${active
+                    ? 'bg-stone-800 text-white border-stone-800 shadow-xs'
+                    : 'bg-white/80 text-stone-600 border-stone-200/80 hover:bg-white hover:text-black'
+                    }`}
+                >
+                  {st.label}
+                </button>
+              );
+            })}
+
+            {isFiltering && (
+              <button
+                onClick={() => {
+                  setSelectedCategory('ALL');
+                  setSelectedStyle('ALL');
+                }}
+                className="text-xs text-stone-500 hover:text-black font-semibold underline underline-offset-4 ml-2 transition cursor-pointer"
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = '/assets/banner.webp';
-                  }}
-                />
-
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
-
-                {/* Top Badge: Số thứ tự + Tag + Số ảnh */}
-                <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
-                  <span className="text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-black text-white border border-stone-800 shadow-sm">
-                    #{item.num < 10 ? `0${item.num}` : item.num}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-black/90 backdrop-blur-md text-white border border-stone-700">
-                    {item.tag}
-                  </span>
-                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-black/75 text-white border border-stone-800/80">
-                    {item.album.length} ảnh
-                  </span>
-                </div>
-
-                {/* Hover Eye Icon */}
-                <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full bg-stone-900 text-white shadow-md">
-                  <ArrowUpRight className="w-4 h-4" />
-                </div>
-
-                {/* Bottom Info */}
-                <div className="absolute bottom-0 inset-x-0 p-4 z-10 space-y-1">
-                  <div className="flex items-center gap-1 text-[11px] text-white font-medium">
-                    <MapPin className="w-3 h-3 shrink-0" />
-                    <span>{item.location}</span>
-                  </div>
-                  <h4 className="text-xs sm:text-sm font-bold text-white transition-colors truncate">
-                    {item.title}
-                  </h4>
-                </div>
-              </div>
-            ))}
+                Đặt lại
+              </button>
+            )}
           </div>
         </div>
 
       </div>
+
+      {/* HIỂN THỊ DỰ ÁN */}
+      {isFiltering ? (
+        /* KHI NGƯỜI DÙNG CHỌN BỘ LỌC: HIỂN THỊ DẠNG LƯỚI GRID ĐỂ XEM CHÍNH XÁC CÁC DỰ ÁN PHÙ HỢP */
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex items-center justify-between mb-4 pb-2 border-b border-stone-200">
+            <span className="text-xs font-bold text-stone-600">
+              Tìm thấy <strong className="text-black">{filteredSpaces.length}</strong> công trình phù hợp:
+            </span>
+            <span className="text-xs text-stone-500 italic">Click vào ảnh để xem chi tiết album</span>
+          </div>
+
+          {filteredSpaces.length === 0 ? (
+            <div className="text-center py-12 bg-white rounded-2xl border border-stone-200 p-8">
+              <p className="text-stone-500 text-sm">Chưa có công trình phù hợp với bộ lọc kết hợp này.</p>
+              <button
+                onClick={() => {
+                  setSelectedCategory('ALL');
+                  setSelectedStyle('ALL');
+                }}
+                className="mt-3 px-4 py-2 rounded-xl bg-black text-white text-xs font-bold hover:bg-stone-800 transition"
+              >
+                Xem tất cả 18 dự án
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filteredSpaces.map((item) => (
+                <div
+                  key={`grid-${item.id}`}
+                  onClick={() => handleOpenSpace(item)}
+                  className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden cursor-pointer border border-stone-200 hover:border-black transition-all duration-300 shadow-sm hover:shadow-xl bg-white"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/assets/banner.webp';
+                    }}
+                  />
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+
+                  {/* Top Badge: Số thứ tự + Tag + Số ảnh */}
+                  <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
+                    <span className="text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-black text-white border border-stone-800 shadow-sm">
+                      #{item.num < 10 ? `0${item.num}` : item.num}
+                    </span>
+                    <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-black/90 backdrop-blur-md text-white border border-stone-700">
+                      {item.tag}
+                    </span>
+                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-black/75 text-white border border-stone-800/80">
+                      {item.album.length} ảnh
+                    </span>
+                  </div>
+
+                  {/* Hover Eye Icon */}
+                  <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full bg-white text-black shadow-md">
+                    <ArrowUpRight className="w-4 h-4" />
+                  </div>
+
+                  {/* Bottom Info */}
+                  <div className="absolute bottom-0 inset-x-0 p-4 z-10 space-y-1">
+                    <div className="flex items-center gap-1 text-[11px] text-stone-300 font-medium">
+                      <MapPin className="w-3 h-3 shrink-0" />
+                      <span>{item.location}</span>
+                    </div>
+                    <h4 className="text-sm font-bold text-white transition-colors truncate">
+                      {item.title}
+                    </h4>
+                    <p className="text-[11px] text-stone-400 truncate">
+                      Phong cách: <span className="text-stone-200">{item.style}</span>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        /* KHI CHƯA CHỌN LỌC (MẶC ĐỊNH): 2 ROWS INFINITE MARQUEE WALL CHẠY VÔ TẬN SANG CHẢNH */
+        <div className="space-y-4 sm:space-y-6 relative z-10 select-none">
+
+          {/* ROW 1: Dự án 1 -> 8 (Trôi sang trái) */}
+          <div className="overflow-hidden w-full flex">
+            <div className="animate-marquee-left pause-hover flex gap-4 sm:gap-6">
+              {[...row1, ...row1].map((item, idx) => (
+                <div
+                  key={`r1-${item.id}-${idx}`}
+                  onClick={() => handleOpenSpace(item)}
+                  className="group relative w-72 sm:w-88 md:w-96 h-48 sm:h-56 md:h-64 rounded-2xl overflow-hidden shrink-0 cursor-pointer border border-stone-200/90 hover:border-black transition-all duration-300 shadow-sm hover:shadow-xl bg-white"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/assets/banner.webp';
+                    }}
+                  />
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+
+                  {/* Top Badge: Số thứ tự + Tag + Số ảnh */}
+                  <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
+                    <span className="text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-black text-white border border-stone-800 shadow-sm">
+                      #{item.num < 10 ? `0${item.num}` : item.num}
+                    </span>
+                    <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-black/90 backdrop-blur-md text-white border border-stone-700">
+                      {item.tag}
+                    </span>
+                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-black/75 text-white border border-stone-800/80">
+                      {item.album.length} ảnh
+                    </span>
+                  </div>
+
+                  {/* Hover Eye Icon */}
+                  <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full bg-white text-black shadow-md">
+                    <ArrowUpRight className="w-4 h-4" />
+                  </div>
+
+                  {/* Bottom Info */}
+                  <div className="absolute bottom-0 inset-x-0 p-4 z-10 space-y-1">
+                    <div className="flex items-center gap-1 text-[11px] text-stone-300 font-medium">
+                      <MapPin className="w-3 h-3 shrink-0" />
+                      <span>{item.location}</span>
+                    </div>
+                    <h4 className="text-xs sm:text-sm font-bold text-white transition-colors truncate">
+                      {item.title}
+                    </h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ROW 2: Dự án 9 -> 18 (Trôi sang phải) */}
+          <div className="overflow-hidden w-full flex">
+            <div className="animate-marquee-right pause-hover flex gap-4 sm:gap-6">
+              {[...row2, ...row2].map((item, idx) => (
+                <div
+                  key={`r2-${item.id}-${idx}`}
+                  onClick={() => handleOpenSpace(item)}
+                  className="group relative w-72 sm:w-88 md:w-96 h-48 sm:h-56 md:h-64 rounded-2xl overflow-hidden shrink-0 cursor-pointer border border-stone-200/90 hover:border-black transition-all duration-300 shadow-sm hover:shadow-xl bg-white"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = '/assets/banner.webp';
+                    }}
+                  />
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+
+                  {/* Top Badge: Số thứ tự + Tag + Số ảnh */}
+                  <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
+                    <span className="text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-black text-white border border-stone-800 shadow-sm">
+                      #{item.num < 10 ? `0${item.num}` : item.num}
+                    </span>
+                    <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-black/90 backdrop-blur-md text-white border border-stone-700">
+                      {item.tag}
+                    </span>
+                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-black/75 text-white border border-stone-800/80">
+                      {item.album.length} ảnh
+                    </span>
+                  </div>
+
+                  {/* Hover Eye Icon */}
+                  <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity p-2 rounded-full bg-white text-black shadow-md">
+                    <ArrowUpRight className="w-4 h-4" />
+                  </div>
+
+                  {/* Bottom Info */}
+                  <div className="absolute bottom-0 inset-x-0 p-4 z-10 space-y-1">
+                    <div className="flex items-center gap-1 text-[11px] text-stone-300 font-medium">
+                      <MapPin className="w-3 h-3 shrink-0" />
+                      <span>{item.location}</span>
+                    </div>
+                    <h4 className="text-xs sm:text-sm font-bold text-white transition-colors truncate">
+                      {item.title}
+                    </h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      )}
 
       {/* Lightbox Album Modal: Xem Toàn Bộ Album Nhiều Ảnh Của Dự Án */}
       {activeSpace && (

@@ -534,8 +534,8 @@ export const allGallerySpaces = [
     ]
   },
   {
-    "id": "project-18",
-    "num": 18,
+    "id": "project-19",
+    "num": 19,
     "title": "Căn Hộ The GoldView 110m²",
     "location": "Bến Vân Đồn, Q.4",
     "tag": "Căn Hộ",
@@ -580,6 +580,37 @@ export const allGallerySpaces = [
       "/assets/18_Can_Ho_Goldview/18_Can_Ho_Goldview_036.jpg",
       "/assets/18_Can_Ho_Goldview/18_Can_Ho_Goldview_037.jpg",
       "/assets/18_Can_Ho_Goldview/18_Can_Ho_Goldview_038.jpg"
+    ],
+  },
+  {
+    "id": "project-18",
+    "num": 18,
+    "title": "Biệt Thự Thạnh Mỹ Lợi – TP. Thủ Đức",
+    "location": "Thạnh Mỹ Lợi, TP. Thủ Đức, TP.HCM",
+    "tag": "Biệt Thự",
+    "style": "Hiện Đại – Tối Giản & Sang Trọng",
+    "image": "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_001.jpg",
+    "album": [
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_001.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_002.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_003.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_004.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_005.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_006.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_007.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_008.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_009.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_010.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_011.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_012.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_013.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_014.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_015.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_016.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_017.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_018.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_019.jpg",
+      "/assets/ANH_BIET_THU_THANH_MY_LOI/anh_020.jpg"
     ]
   }
 ];
