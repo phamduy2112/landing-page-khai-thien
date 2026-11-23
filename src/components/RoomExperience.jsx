@@ -56,12 +56,12 @@ export default function RoomExperience() {
                 key={room.id}
                 className="bg-white rounded-3xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
-                {/* Khung hình ảnh: Dùng tỷ lệ hoặc tự do chiều cao để lột tả trọn vẹn ảnh gốc */}
-                <div className="relative w-full bg-slate-900 overflow-hidden">
+                {/* Khung hình ảnh: Đảm bảo responsive tỉ lệ chuẩn đẹp, không bị méo */}
+                <div className="relative w-full bg-slate-900 overflow-hidden aspect-[4/3] sm:aspect-[16/11]">
                   <img
                     src={room.image}
                     alt={room.name}
-                    className="w-full h-[350px] object-fill group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />

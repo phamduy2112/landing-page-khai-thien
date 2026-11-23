@@ -100,10 +100,7 @@ export default function InfiniteGalleryWall() {
 
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900 text-white text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
-          <Sparkles className="w-3.5 h-3.5 text-stone-300" />
-          <span>Thư Viện Công Trình Bàn Giao</span>
-        </div>
+
 
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
           Dấu Ấn Công Trình{" "}
@@ -399,7 +396,7 @@ export default function InfiniteGalleryWall() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* 1. Main Large Image */}
-            <div className="relative w-full h-[45vh] sm:h-[55vh] bg-black flex items-center justify-center overflow-hidden">
+            <div className="relative w-full h-[38vh] sm:h-[50vh] md:h-[55vh] bg-black flex items-center justify-center overflow-hidden">
               <img
                 src={activeSpace.album[currentPhotoIdx]}
                 alt={`${activeSpace.title} - Ảnh ${currentPhotoIdx + 1}`}
@@ -413,23 +410,23 @@ export default function InfiniteGalleryWall() {
                     type="button"
                     onClick={handlePrevPhoto}
                     aria-label="Previous"
-                    className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-stone-900/80 text-white hover:bg-white hover:text-black transition cursor-pointer shadow-lg"
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 rounded-full bg-stone-900/80 text-white hover:bg-white hover:text-black transition cursor-pointer shadow-lg"
                   >
-                    <ChevronLeft className="w-6 h-6" />
+                    <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                   </button>
                   <button
                     type="button"
                     onClick={handleNextPhoto}
                     aria-label="Next"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-stone-900/80 text-white hover:bg-white hover:text-black transition cursor-pointer shadow-lg"
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 rounded-full bg-stone-900/80 text-white hover:bg-white hover:text-black transition cursor-pointer shadow-lg"
                   >
-                    <ChevronRight className="w-6 h-6" />
+                    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                   </button>
                 </>
               )}
 
               {/* Counter Badge */}
-              <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-stone-200">
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black/75 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold text-stone-200">
                 Ảnh {currentPhotoIdx + 1} / {activeSpace.album.length}
               </div>
             </div>
@@ -495,26 +492,26 @@ export default function InfiniteGalleryWall() {
             )}
 
             {/* 3. Modal Info & CTA Footer */}
-            <div className="p-4 sm:p-5 bg-stone-950 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded bg-black text-white border border-stone-700 uppercase tracking-wider shadow-sm">
+            <div className="p-3.5 sm:p-5 bg-stone-950 border-t border-stone-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1">
+                  <span className="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded bg-black text-white border border-stone-700 uppercase tracking-wider shadow-sm">
                     #{activeSpace.num < 10 ? `0${activeSpace.num}` : activeSpace.num}
                   </span>
-                  <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-black text-white border border-stone-800 uppercase tracking-wider">
+                  <span className="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded bg-black text-white border border-stone-800 uppercase tracking-wider">
                     {activeSpace.tag}
                   </span>
                   <span className="text-stone-500">•</span>
-                  <span className="text-xs text-stone-400">{activeSpace.location}</span>
+                  <span className="text-[11px] sm:text-xs text-stone-400 truncate">{activeSpace.location}</span>
                 </div>
-                <h4 className="text-base sm:text-lg font-bold text-white">{activeSpace.title}</h4>
-                <p className="text-xs text-stone-400 mt-0.5">Phong cách thiết kế: {activeSpace.style}</p>
+                <h4 className="text-sm sm:text-base md:text-lg font-bold text-white truncate">{activeSpace.title}</h4>
+                <p className="text-[11px] sm:text-xs text-stone-400 mt-0.5 truncate">Phong cách: {activeSpace.style}</p>
               </div>
 
               <a
                 href="#consultation"
                 onClick={() => setActiveSpace(null)}
-                className="px-5 py-2.5 rounded-xl bg-white hover:bg-stone-200 text-black text-xs sm:text-sm font-bold transition shadow whitespace-nowrap self-start sm:self-auto"
+                className="w-full sm:w-auto text-center px-4 sm:px-5 py-2.5 rounded-xl bg-white hover:bg-stone-200 text-black text-xs sm:text-sm font-bold transition shadow whitespace-nowrap shrink-0"
               >
                 Nhận Báo Giá May Đo Không Gian Này
               </a>

@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Cột 1: Thông tin thương hiệu */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/assets/Logo (4).png" alt={brandInfo.name} className="w-[190px]" />
+              <img src="/assets/Logo (4).png" alt={brandInfo.name} className="w-[140px] sm:w-[170px] md:w-[190px] h-auto object-contain" />
             </div>
 
             <p className="text-xs font-semibold text-slate-800 uppercase tracking-wide">

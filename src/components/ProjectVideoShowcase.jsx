@@ -161,7 +161,7 @@ export default function ProjectVideoShowcase() {
 
               <a
                 href="#consultation"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-black text-slate-950 text-xs font-bold transition shadow whitespace-nowrap self-start sm:self-auto shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-stone-200 text-black text-xs font-bold transition shadow whitespace-nowrap self-stretch sm:self-auto shrink-0"
               >
                 <span>Nhận Tư Vấn Công Trình</span>
                 <ArrowRight className="w-3.5 h-3.5" />

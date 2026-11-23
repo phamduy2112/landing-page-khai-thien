@@ -49,8 +49,8 @@ export default function Header() {
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo Khải Thiên */}
-          <a href="#" className="flex items-center gap-3 group">
-            <img src="/assets/Logo (4).png" alt={brandInfo.name} className="w-[170px]" />
+          <a href="#" className="flex items-center gap-2 group">
+            <img src="/assets/Logo (4).png" alt={brandInfo.name} className="w-[130px] sm:w-[155px] md:w-[170px] h-auto object-contain" />
           </a>
 
           {/* Desktop Nav Links */}
