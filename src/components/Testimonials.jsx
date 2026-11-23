@@ -63,11 +63,7 @@ export default function Testimonials() {
               {/* Nội dung phản hồi */}
               <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                 <div className="space-y-2.5">
-                  <div className="flex items-center gap-1 text-stone-900">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-stone-900 text-stone-900" />
-                    ))}
-                  </div>
+
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
                     "{item.quote}"
                   </p>

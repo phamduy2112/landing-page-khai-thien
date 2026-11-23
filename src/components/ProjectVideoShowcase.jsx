@@ -89,6 +89,7 @@ export default function ProjectVideoShowcase() {
   const [activeVideo, setActiveVideo] = useState(videoList[0]);
   const currentMedia = getVideoMedia(activeVideo);
 
+
   return (
     <section id="project-videos" className="py-20 bg-[#FAF8F5] border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
