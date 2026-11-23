@@ -31,25 +31,25 @@ export default function HeadquartersSection() {
 
             {/* Cột trái: Thông tin trụ sở */}
             <div className="lg:col-span-5 flex flex-col justify-center">
-              <div className="text-left p-6 sm:p-7 rounded-2xl bg-amber-50/50 border-l-4 border-l-amber-600 border border-amber-200/80 shadow-sm">
+              <div className="text-left p-6 sm:p-7 rounded-2xl bg-stone-100/50 border-l-4 border-l-amber-600 border border-stone-300/80 shadow-sm">
                 <div className="flex items-center gap-2.5">
-                  <Building2 className="w-5 h-5 text-amber-600 shrink-0" />
+                  <Building2 className="w-5 h-5 text-stone-900 shrink-0" />
                   <h3 className="text-lg font-bold text-slate-900 leading-snug">
                     {branch.name}
                   </h3>
                 </div>
 
                 <div className="flex items-start gap-2.5 mt-3 text-slate-700 text-sm leading-relaxed">
-                  <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-stone-900 shrink-0 mt-0.5" />
                   <p>{branch.address}</p>
                 </div>
 
-                <div className="mt-5 pt-4 border-t border-amber-200/60">
+                <div className="mt-5 pt-4 border-t border-stone-300/60">
                   <a
                     href={branch.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm shadow-md transition"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-xs sm:text-sm shadow-md transition"
                   >
                     <Navigation className="w-4 h-4 shrink-0" />
                     <span>Chỉ đường trên Google Maps</span>
@@ -80,7 +80,7 @@ export default function HeadquartersSection() {
                     href={branch.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm shadow-lg transition whitespace-nowrap"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-xs sm:text-sm shadow-lg transition whitespace-nowrap"
                   >
                     <Navigation className="w-4 h-4 shrink-0" />
                     <span>Mở Google Maps</span>

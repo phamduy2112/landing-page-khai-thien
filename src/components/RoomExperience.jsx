@@ -69,12 +69,12 @@ export default function RoomExperience() {
                   {/* Top Badges */}
                   <div className="absolute top-4 left-4 flex items-center gap-2">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md border border-stone-200 text-slate-800 text-xs font-bold shadow-xs">
-                      <Icon className="w-3.5 h-3.5 text-amber-600" />
+                      <Icon className="w-3.5 h-3.5 text-stone-900" />
                       <span>{room.name}</span>
                     </span>
                   </div>
 
-                  <span className="absolute top-4 right-4 text-[11px] font-bold px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 shadow">
+                  <span className="absolute top-4 right-4 text-[11px] font-bold px-2.5 py-1 rounded-lg bg-stone-900 text-white shadow">
                     {room.badge}
                   </span>
                 </div>
@@ -82,7 +82,7 @@ export default function RoomExperience() {
                 {/* Content */}
                 <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-1.5">
-                    <span className="text-[10px] text-amber-700 font-bold uppercase tracking-widest block">
+                    <span className="text-[10px] text-stone-900 font-bold uppercase tracking-widest block">
                       {room.enName}
                     </span>
                     <h3 className="text-xl font-bold text-slate-900">
@@ -96,7 +96,7 @@ export default function RoomExperience() {
                   <div className="pt-2">
                     <a
                       href="#consultation"
-                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-slate-900 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold transition duration-200 shadow"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-slate-900 hover:bg-stone-900 text-white text-xs sm:text-sm font-bold transition duration-200 shadow"
                     >
                       <span>Nhận Báo Giá {room.name}</span>
                       <ArrowRight className="w-3.5 h-3.5" />

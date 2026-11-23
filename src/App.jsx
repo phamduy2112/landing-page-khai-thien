@@ -5,7 +5,9 @@ import Services from './components/Services';
 import BeforeAfterSection from './components/BeforeAfterSection';
 import RoomExperience from './components/RoomExperience';
 import Portfolio from './components/Portfolio';
+import ProjectVideoShowcase from './components/ProjectVideoShowcase';
 import WhyChooseUs from './components/WhyChooseUs';
+import InfiniteGalleryWall from './components/InfiniteGalleryWall';
 import Roadmap from './components/Roadmap';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
@@ -16,7 +18,7 @@ import FloatingContact from './components/FloatingContact';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-slate-800 flex flex-col selection:bg-amber-700 selection:text-white">
+    <div className="min-h-screen bg-[#FAF8F5] text-slate-800 flex flex-col selection:bg-slate-900 selection:text-white">
       {/* 1. Header & Navigation */}
       <Header />
 
@@ -31,28 +33,32 @@ export default function App() {
         {/* 4. Minh Chứng 3D vs Thực Tế Bàn Giao */}
         <BeforeAfterSection />
 
-        {/* 5. Khám Phá Không Gian Từng Phòng */}
+
+        {/* 6. Khám Phá Không Gian Từng Phòng */}
         <RoomExperience />
 
-        {/* 6. Dự Án Tiêu Biểu Bàn Giao */}
-        <Portfolio />
+        {/* 7. Tường Ảnh Vô Tận Show Hàng Loạt Không Gian Thực Tế */}
+        <InfiniteGalleryWall />
 
-        {/* 7. 4 Cam Kết Vàng Từ Khải Thiên */}
+        {/* 8. 4 Cam Kết Vàng Từ Xưởng Khải Thiên */}
         <WhyChooseUs />
 
-        {/* 8. Quy Trình 5 Bước */}
-        <Roadmap />
+        {/* 9. Quy Trình 4 Bước Chuẩn Hóa */}
+        {/* <Roadmap /> */}
 
-        {/* 9. Đánh Giá Từ Gia Chủ */}
+        {/* 5. Video Bàn Giao Thực Tế (Minh chứng sống động nhất) */}
+        <ProjectVideoShowcase />
+
+        {/* 10. Đánh Giá Từ Gia Chủ */}
         <Testimonials />
 
-        {/* 10. Câu Hỏi Thường Gặp */}
+        {/* 11. Câu Hỏi Thường Gặp */}
         <FAQ />
 
-        {/* 11. Form Đăng Ký Tư Vấn & Nhận Dự Toán */}
+        {/* 12. Form Đăng Ký Tư Vấn & Nhận Dự Toán */}
         <ConsultationForm />
 
-        {/* 12. Hệ Thống Cơ Sở Trực Tiếp */}
+        {/* 13. Hệ Thống Cơ Sở Trực Tiếp */}
         <HeadquartersSection />
       </main>
 

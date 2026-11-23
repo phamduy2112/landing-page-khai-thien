@@ -74,7 +74,7 @@ export default function Portfolio() {
                           }
                         }}
                         className={`py-2 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${activeCategory === cat.id
-                            ? 'bg-slate-900 text-amber-400 shadow'
+                            ? 'bg-slate-900 text-stone-900 shadow'
                             : 'bg-white hover:bg-stone-100 text-slate-600 border border-stone-200'
                           }`}
                       >
@@ -140,7 +140,7 @@ export default function Portfolio() {
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
 
-                                <div className="absolute bottom-2.5 right-2.5 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md flex items-center gap-1 shadow">
+                                <div className="absolute bottom-2.5 right-2.5 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity bg-stone-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-md flex items-center gap-1 shadow">
                                   <Eye className="w-3 h-3" />
                                   <span>Xem Album</span>
                                 </div>
@@ -148,15 +148,15 @@ export default function Portfolio() {
 
                               {/* Caption: Title 1 dòng chuẩn xác */}
                               <div className="p-4 space-y-1.5">
-                                <div className="flex items-center gap-1 text-[11px] text-amber-700 font-semibold truncate">
-                                  <MapPin className="w-3 h-3 text-amber-600 shrink-0" />
+                                <div className="flex items-center gap-1 text-[11px] text-stone-900 font-semibold truncate">
+                                  <MapPin className="w-3 h-3 text-stone-900 shrink-0" />
                                   <span className="truncate">{project.location.split(',').pop()?.trim()}</span>
                                 </div>
 
                                 {/* Title luôn 1 dòng */}
                                 <h3
                                   title={project.title}
-                                  className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-amber-600 transition truncate block leading-snug"
+                                  className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-stone-900 transition truncate block leading-snug"
                                 >
                                   {project.title}
                                 </h3>
@@ -232,7 +232,7 @@ export default function Portfolio() {
                                       prev === 0 ? lightboxProject.gallery.length - 1 : prev - 1
                                     );
                                   }}
-                                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-amber-600 transition cursor-pointer"
+                                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-stone-900 transition cursor-pointer"
                                 >
                                   <ChevronLeft className="w-6 h-6" />
                                 </button>
@@ -244,7 +244,7 @@ export default function Portfolio() {
                                       prev === (lightboxProject.gallery.length - 1) ? 0 : prev + 1
                                     );
                                   }}
-                                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-amber-600 transition cursor-pointer"
+                                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-stone-900 transition cursor-pointer"
                                 >
                                   <ChevronRight className="w-6 h-6" />
                                 </button>
@@ -265,7 +265,7 @@ export default function Portfolio() {
                                     key={i}
                                     type="button"
                                     onClick={() => setLightboxIndex(i)}
-                                    className={`w-12 h-10 rounded-lg overflow-hidden border-2 transition cursor-pointer ${lightboxIndex === i ? 'border-amber-500' : 'border-transparent opacity-60'
+                                    className={`w-12 h-10 rounded-lg overflow-hidden border-2 transition cursor-pointer ${lightboxIndex === i ? 'border-stone-900' : 'border-transparent opacity-60'
                                       }`}
                                   >
                                     <img src={img} alt="Thumb" className="w-full h-full object-cover" />

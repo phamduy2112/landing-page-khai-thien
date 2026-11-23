@@ -27,17 +27,17 @@ export default function Header() {
       <div className="bg-stone-50 text-slate-600 text-xs py-2 px-4 border-b border-stone-200 hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="#he-thong-co-so" className="flex items-center gap-1.5 hover:text-amber-700 transition whitespace-nowrap">
-              <MapPin className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <a href="#he-thong-co-so" className="flex items-center gap-1.5 hover:text-stone-900 transition whitespace-nowrap">
+              <MapPin className="w-3.5 h-3.5 text-stone-900 shrink-0" />
               <span>Showroom: {brandInfo.addressOffice}</span>
             </a>
             <span className="flex items-center gap-1.5 whitespace-nowrap">
-              <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <Clock className="w-3.5 h-3.5 text-stone-900 shrink-0" />
               <span>Mở cửa 8h00 - 21h00 (T2 - CN)</span>
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-1.5 text-amber-700 font-semibold whitespace-nowrap">
+            <span className="inline-flex items-center gap-1.5 text-stone-900 font-semibold whitespace-nowrap">
               <span>Xưởng Sản Xuất Trực Tiếp • Thiết Kế & Thi Công Trọn Gói</span>
             </span>
           </div>
@@ -59,7 +59,7 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-slate-700 hover:text-amber-600 transition tracking-wide whitespace-nowrap"
+                className="text-sm font-semibold text-slate-700 hover:text-stone-900 transition tracking-wide whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -70,7 +70,7 @@ export default function Header() {
           <div className="hidden md:flex items-center">
             <a
               href="#consultation"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-xl transition-all duration-200 shadow-sm whitespace-nowrap"
+              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-stone-900 text-white text-xs sm:text-sm font-bold py-2.5 px-6 rounded-xl transition-all duration-200 shadow-sm whitespace-nowrap"
             >
               <span>Liên Hệ Ngay</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
@@ -104,7 +104,7 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3.5 py-2.5 rounded-xl text-sm font-bold text-slate-800 hover:bg-amber-50 hover:text-amber-700 transition"
+                  className="block px-3.5 py-2.5 rounded-xl text-sm font-bold text-slate-800 hover:bg-stone-100 hover:text-stone-900 transition"
                 >
                   {link.name}
                 </a>
@@ -115,7 +115,7 @@ export default function Header() {
               <a
                 href="#consultation"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-xl shadow transition"
+                className="w-full text-center block bg-stone-900 hover:bg-black text-white font-bold py-3 px-4 rounded-xl shadow transition"
               >
                 Liên Hệ Ngay
               </a>

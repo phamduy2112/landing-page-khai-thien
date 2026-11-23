@@ -25,7 +25,7 @@ export default function FloatingContact() {
           {/* Nút Gọi Ngay */}
           <a
             href={`tel:${brandInfo.hotline1.replace(/\s+/g, '')}`}
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-amber-600 text-white font-bold text-[11px] shadow-sm active:scale-95 transition whitespace-nowrap"
+            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-stone-900 text-white font-bold text-[11px] shadow-sm active:scale-95 transition whitespace-nowrap"
           >
             <Phone className="w-4 h-4 mb-0.5 animate-bounce" />
             <span>Gọi Ngay</span>
@@ -71,7 +71,7 @@ export default function FloatingContact() {
         {/* Nút Hotline Desktop */}
         <a
           href={`tel:${brandInfo.hotline1.replace(/\s+/g, '')}`}
-          className="group flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white py-2.5 px-4 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+          className="group flex items-center gap-2 bg-stone-900 hover:bg-black text-white py-2.5 px-4 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
         >
           <Phone className="w-5 h-5 animate-pulse" />
           <span className="text-xs font-bold">

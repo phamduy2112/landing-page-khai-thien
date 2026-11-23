@@ -26,8 +26,8 @@ export default function Footer() {
               Đơn vị tiên phong trong giải pháp thiết kế sáng tạo và thi công nội thất trọn gói chất lượng cao tại TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh. Sở hữu xưởng sản xuất trực tiếp, cam kết giống 3D 99% và vật liệu An Cường 100%.
             </p>
 
-            <div className="pt-2 flex items-center gap-2 text-xs text-amber-700 font-semibold whitespace-nowrap">
-              <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+            <div className="pt-2 flex items-center gap-2 text-xs text-stone-900 font-semibold whitespace-nowrap">
+              <ShieldCheck className="w-4 h-4 text-stone-900 shrink-0" />
               <span>Bảo hành kết cấu 36 tháng – Bảo trì trọn đời</span>
             </div>
           </div>
@@ -39,14 +39,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-stone-900 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-900 block font-semibold">Trụ sở & Văn phòng KTS:</strong>
                   <span className="text-slate-600">{brandInfo.addressOffice}</span>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-stone-900 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-900 block font-semibold">Giờ mở cửa đón tiếp:</strong>
                   <span className="text-slate-600">08:00 – 21:00 (Mở cửa tất cả các ngày trong tuần)</span>
@@ -55,7 +55,7 @@ export default function Footer() {
               <li className="pt-1">
                 <a
                   href="#he-thong-co-so"
-                  className="inline-flex items-center gap-1.5 text-xs text-amber-700 hover:text-amber-800 font-semibold transition"
+                  className="inline-flex items-center gap-1.5 text-xs text-stone-900 hover:text-stone-900 font-semibold transition"
                 >
                   <span>Xem chi tiết trụ sở & chỉ đường Google Maps</span>
                   <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
@@ -74,13 +74,13 @@ export default function Footer() {
                 <p className="text-slate-500 text-xs font-semibold">Hotline tư vấn / Zalo:</p>
                 <a
                   href={`tel:${brandInfo.hotline1.replace(/\s+/g, '')}`}
-                  className="text-slate-900 text-base font-bold hover:text-amber-700 transition block mt-0.5 whitespace-nowrap"
+                  className="text-slate-900 text-base font-bold hover:text-stone-900 transition block mt-0.5 whitespace-nowrap"
                 >
                   {brandInfo.hotline1}
                 </a>
                 <a
                   href={`tel:${brandInfo.hotline2.replace(/\s+/g, '')}`}
-                  className="text-slate-700 text-sm font-semibold hover:text-amber-700 transition block whitespace-nowrap"
+                  className="text-slate-700 text-sm font-semibold hover:text-stone-900 transition block whitespace-nowrap"
                 >
                   {brandInfo.hotline2}
                 </a>
@@ -101,7 +101,7 @@ export default function Footer() {
                   href={brandInfo.zaloUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-amber-700 hover:text-amber-800 font-bold whitespace-nowrap"
+                  className="inline-flex items-center gap-1.5 text-xs text-stone-900 hover:text-stone-900 font-bold whitespace-nowrap"
                 >
                   <span>Chat Zalo với Mr.&nbsp;Thành&nbsp;Tín</span>
                   <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />

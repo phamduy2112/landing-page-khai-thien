@@ -68,7 +68,7 @@ export default function Services() {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
 
                       {/* Overlaid Badges */}
-                      <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/85 backdrop-blur-md text-amber-400 text-xs font-bold border border-white/10">
+                      <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/85 backdrop-blur-md text-white text-xs font-bold border border-white/10">
                         <Icon className="w-3.5 h-3.5" />
                         <span>{service.badge}</span>
                       </div>
@@ -77,7 +77,7 @@ export default function Services() {
                         <span className="font-bold bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10">
                           Xưởng sản xuất Khải Thiên
                         </span>
-                        <span className="text-amber-300 font-semibold bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
+                        <span className="text-white font-semibold bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
                           100% Gỗ An Cường
                         </span>
                       </div>
@@ -87,9 +87,9 @@ export default function Services() {
                   {/* Content Column */}
                   <div className={`lg:col-span-5 space-y-5 ${isReversed ? 'lg:order-1' : ''}`}>
                     <div className="space-y-2">
-                      <div className="inline-flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-widest">
+                      <div className="inline-flex items-center gap-2 text-xs font-bold text-stone-900 uppercase tracking-widest">
                         <span>[ {service.num} ]</span>
-                        <span className="w-8 h-px bg-amber-600/40" />
+                        <span className="w-8 h-px bg-stone-900/40" />
                         <span>{service.badge}</span>
                       </div>
 
@@ -128,7 +128,7 @@ export default function Services() {
                     <div className="pt-2">
                       <a
                         href="#consultation"
-                        className="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm transition duration-200 shadow group"
+                        className="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-slate-900 hover:bg-stone-900 text-white font-bold text-xs sm:text-sm transition duration-200 shadow group"
                       >
                         <span>{service.ctaText}</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />

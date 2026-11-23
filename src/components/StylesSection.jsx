@@ -14,7 +14,7 @@ export default function StylesSection() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-100 text-stone-800 text-xs font-bold uppercase tracking-wider">
-            <Palette className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <Palette className="w-3.5 h-3.5 text-stone-900 shrink-0" />
             <span>Gu Thẩm Mỹ Độc Bản</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 text-balance">
@@ -49,7 +49,7 @@ export default function StylesSection() {
                     >
                       <div>
                         <span className={`text-[10px] block uppercase tracking-widest ${
-                          isActive ? 'text-amber-400' : 'text-stone-400'
+                          isActive ? 'text-stone-900' : 'text-stone-400'
                         }`}>
                           [ 0{style.number} ]
                         </span>
@@ -67,8 +67,8 @@ export default function StylesSection() {
 
               {/* Thông tin chi tiết phong cách đang chọn */}
               <div className="space-y-4 pt-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-500/10 text-amber-800 text-xs font-extrabold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-stone-900/10 text-stone-900 text-xs font-extrabold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-stone-900" />
                   <span>{activeStyle.tag}</span>
                 </div>
 
@@ -117,7 +117,7 @@ export default function StylesSection() {
 
                   <a
                     href="#consultation"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition shadow-md shrink-0 whitespace-nowrap"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-stone-900 hover:bg-black text-white text-xs font-bold transition shadow-md shrink-0 whitespace-nowrap"
                   >
                     <span>Tư Vấn Gu Này</span>
                     <ArrowRight className="w-4 h-4 shrink-0" />
@@ -141,7 +141,7 @@ export default function StylesSection() {
 
                   {/* Overlaid Title */}
                   <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 text-white">
-                    <span className="text-[10px] text-amber-400 font-bold uppercase tracking-widest block">Không gian thực tế</span>
+                    <span className="text-[10px] text-stone-900 font-bold uppercase tracking-widest block">Không gian thực tế</span>
                     <h4 className="text-base font-bold text-white mt-0.5">{activeStyle.name}</h4>
                     <p className="text-xs text-slate-300 mt-1">Được thiết kế và thi công giá xưởng trực tiếp bởi Khải Thiên</p>
                   </div>
@@ -174,7 +174,7 @@ export default function StylesSection() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-stone-500">
               Chọn nhanh phong cách để xem chi tiết bên trên:
             </h4>
-            <span className="text-xs text-amber-700 font-semibold">
+            <span className="text-xs text-stone-900 font-semibold">
               4 Trường phái kiến trúc
             </span>
           </div>
@@ -188,8 +188,8 @@ export default function StylesSection() {
                   onClick={() => setActiveStyleId(style.id)}
                   className={`cursor-pointer rounded-2xl overflow-hidden p-3 transition-all duration-300 border ${
                     isSelected
-                      ? 'bg-amber-50/70 border-amber-600 shadow-md ring-2 ring-amber-100'
-                      : 'bg-white hover:bg-stone-50 border-stone-200 shadow-2xs hover:border-amber-300'
+                      ? 'bg-stone-100/70 border-stone-900 shadow-md ring-2 ring-stone-200'
+                      : 'bg-white hover:bg-stone-50 border-stone-200 shadow-2xs hover:border-stone-400'
                   }`}
                 >
                   <div className="relative h-28 sm:h-36 rounded-xl overflow-hidden bg-slate-100">
@@ -198,7 +198,7 @@ export default function StylesSection() {
                       alt={style.name}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-2 left-2 bg-slate-900/80 text-amber-400 text-[10px] px-1.5 py-0.5 rounded font-bold">
+                    <div className="absolute top-2 left-2 bg-slate-900/80 text-stone-900 text-[10px] px-1.5 py-0.5 rounded font-bold">
                       0{style.number}
                     </div>
                   </div>

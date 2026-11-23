@@ -10,7 +10,7 @@ export default function FactorySection() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-bold uppercase tracking-wider">
-            <Factory className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <Factory className="w-3.5 h-3.5 text-stone-900 shrink-0" />
             <span>Năng Lực Sản Xuất Độc Lập</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 text-balance">
@@ -36,13 +36,13 @@ export default function FactorySection() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-black text-sm px-3 py-1 rounded-lg">
+                  <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-stone-900 font-black text-sm px-3 py-1 rounded-lg">
                     {item.number}
                   </div>
                 </div>
 
                 <div className="p-5 space-y-3">
-                  <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-600 transition">
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-stone-900 transition">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">

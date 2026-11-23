@@ -63,9 +63,9 @@ export default function Testimonials() {
               {/* Nội dung phản hồi */}
               <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                 <div className="space-y-2.5">
-                  <div className="flex items-center gap-1 text-amber-500">
+                  <div className="flex items-center gap-1 text-stone-900">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-stone-900 text-stone-900" />
                     ))}
                   </div>
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
@@ -74,7 +74,7 @@ export default function Testimonials() {
                 </div>
 
                 <div className="pt-3 border-t border-stone-100 flex items-center gap-3">
-                  {/* <div className="w-9 h-9 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-xs shrink-0">
+                  {/* <div className="w-9 h-9 rounded-full bg-stone-200 text-stone-900 font-bold flex items-center justify-center text-xs shrink-0">
                     {item.name.slice(-1)}
                   </div> */}
                   <div>

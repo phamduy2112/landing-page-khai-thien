@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
               {/* Floating Badge góc dưới */}
               <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-lg">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center shrink-0">
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
@@ -84,20 +84,20 @@ export default function WhyChooseUs() {
                 return (
                   <div
                     key={idx}
-                    className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-stone-200/90 shadow-xs hover:border-amber-400 hover:shadow-md transition-all duration-300 group flex items-start gap-4"
+                    className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-stone-200/90 shadow-xs hover:border-stone-900 hover:shadow-md transition-all duration-300 group flex items-start gap-4"
                   >
                     {/* Số thứ tự / Icon */}
-                    <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 font-bold text-sm flex items-center justify-center border border-amber-200 shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                    <div className="w-11 h-11 rounded-xl bg-stone-100 text-stone-900 font-bold text-sm flex items-center justify-center border border-stone-300 shrink-0 group-hover:bg-stone-900 group-hover:text-white transition-colors">
                       {item.num}
                     </div>
 
                     {/* Nội dung cam kết */}
                     <div className="flex-1 space-y-1">
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-amber-700 transition">
+                        <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-stone-900 transition">
                           {item.title}
                         </h3>
-                        <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/80">
+                        <span className="text-[11px] font-semibold text-stone-900 bg-stone-100 px-2 py-0.5 rounded border border-stone-300/80">
                           {item.highlight}
                         </span>
                       </div>

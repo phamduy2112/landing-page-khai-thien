@@ -92,7 +92,7 @@ export default function ConsultationForm() {
               </div>
 
               <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs text-xs sm:text-sm text-slate-700">
-                <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-stone-900 shrink-0" />
                 <span>Sản xuất trực tiếp tại xưởng tối ưu chi phí</span>
               </div>
 
@@ -154,7 +154,7 @@ export default function ConsultationForm() {
                         placeholder="VD: Nguyễn Văn An"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.fullName
                           ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
-                          : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
+                          : 'border-stone-200 focus:border-stone-900 focus:ring-stone-200'
                           }`}
                       />
                       {errors.fullName && (
@@ -178,7 +178,7 @@ export default function ConsultationForm() {
                         placeholder="VD: 076 666 6633"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition focus:outline-none focus:ring-2 ${errors.phone
                           ? 'border-rose-400 focus:ring-rose-200 bg-rose-50/30'
-                          : 'border-stone-200 focus:border-amber-600 focus:ring-amber-100'
+                          : 'border-stone-200 focus:border-stone-900 focus:ring-stone-200'
                           }`}
                       />
                       {errors.phone && (
@@ -201,7 +201,7 @@ export default function ConsultationForm() {
                         name="propertyType"
                         value={formData.propertyType}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100"
+                        className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-stone-900 focus:ring-2 focus:ring-stone-200"
                       >
                         <option value="Căn hộ chung cư">Căn hộ chung cư</option>
                         <option value="Nhà phố liền kề">Nhà phố liền kề</option>
@@ -222,7 +222,7 @@ export default function ConsultationForm() {
                         value={formData.area}
                         onChange={handleChange}
                         placeholder="VD: 85 m²"
-                        className="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100"
+                        className="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-stone-900 focus:ring-2 focus:ring-stone-200"
                       />
                     </div>
                   </div>
@@ -238,7 +238,7 @@ export default function ConsultationForm() {
                         name="style"
                         value={formData.style}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100"
+                        className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-stone-900 focus:ring-2 focus:ring-stone-200"
                       >
                         <option value="Hiện đại (Modern Luxury)">Hiện đại (Modern Luxury)</option>
                         <option value="Tối giản & Japandi">Tối giản & Japandi</option>
@@ -257,7 +257,7 @@ export default function ConsultationForm() {
                         name="materialInterest"
                         value={formData.materialInterest}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100"
+                        className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-sm focus:outline-none focus:border-stone-900 focus:ring-2 focus:ring-stone-200"
                       >
                         <option value="Thiết kế & thi công trọn gói">Thiết kế & thi công trọn gói</option>
                         <option value="Sản xuất đồ gỗ may đo theo yêu cầu">Sản xuất đồ gỗ may đo theo yêu cầu</option>
@@ -279,7 +279,7 @@ export default function ConsultationForm() {
                       value={formData.notes}
                       onChange={handleChange}
                       placeholder="VD: Cần tư vấn thiết kế thi công trọn gói căn hộ 2 phòng ngủ..."
-                      className="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100 resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-stone-900 focus:ring-2 focus:ring-stone-200 resize-none"
                     />
                   </div>
 
@@ -288,7 +288,7 @@ export default function ConsultationForm() {
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full py-4 px-6 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-bold text-sm sm:text-base transition duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2.5 disabled:opacity-70 disabled:cursor-not-allowed group text-balance"
+                      className="w-full py-4 px-6 rounded-xl bg-slate-900 hover:bg-stone-900 text-white font-bold text-sm sm:text-base transition duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2.5 disabled:opacity-70 disabled:cursor-not-allowed group text-balance"
                     >
                       {status === 'submitting' ? (
                         <>
