@@ -70,10 +70,10 @@ export default function WhyChooseUs() {
 
             {/* Header Cột Phải */}
             <div className="space-y-2">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-[0.015em]">
+              <h2 className="text-3xl sm:text-4xl font-bold text-center sm:text-left text-slate-900 tracking-[0.015em]">
                 Lý Do Gia Chủ Tin Chọn Khải Thiên
               </h2>
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-600 text-xs text-center sm:text-left sm:text-sm leading-relaxed">
                 Minh bạch trong từng hạng mục, chuẩn xác trong thi công và tận tâm trong dịch vụ hậu mãi.
               </p>
             </div>

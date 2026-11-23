@@ -17,13 +17,13 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6 text-left">
 
             {/* H1 Luxury Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance space-y-1.5 sm:space-y-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-center sm:text-left font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance space-y-1.5 sm:space-y-2">
               <span className="">Thiết Kế & Thi Công Nội Thất</span>
               <span className=" text-stone-900 "> Trọn Gói Trực Tiếp Từ Xưởng</span>
             </h1>
 
             {/* Subtitle - Ngắn gọn */}
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal text-pretty">
+            <p className="text-slate-600 text-base sm:text-lg text-center sm:text-left leading-relaxed max-w-xl font-normal text-pretty">
               Hiện thực hóa không gian sống đẳng cấp cho nhà phố, căn hộ và biệt thự với chất lượng tối ưu từ xưởng Khải Thiên.
             </p>
 
@@ -102,34 +102,34 @@ export default function Hero() {
                   </div>
                 </a>
 
-                    {/* Overlaid Tag */}
-                    <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/85 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
-                      <div>
-                        <p className="text-[10px] text-stone-300 font-bold uppercase tracking-wider">Thi công thực tế</p>
-                        <h4 className="text-sm font-bold text-white">Biệt Thự, Nhà Phố & Căn Hộ</h4>
-                      </div>
-                      <span className="text-[11px] bg-white text-black font-extrabold px-2.5 py-1 rounded-lg shadow-sm">
-                        Khải Thiên Furnishing
-                      </span>
-                    </div>
+                {/* Overlaid Tag */}
+                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/85 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
+                  <div>
+                    <p className="text-[10px] text-stone-300 font-bold uppercase tracking-wider">Thi công thực tế</p>
+                    <h4 className="text-sm font-bold text-white">Biệt Thự, Nhà Phố & Căn Hộ</h4>
                   </div>
-
-                  {/* Floating Badge - Xưởng */}
-                  <div className="absolute -top-4 -left-4 bg-white p-3 rounded-2xl shadow-xl border border-stone-200 flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-stone-100 text-stone-900 flex items-center justify-center font-bold border border-stone-300 shrink-0">
-                      <Building2 className="w-5 h-5" />
-                    </div>
-                    <div className="text-left pr-1 whitespace-nowrap">
-                      <p className="text-xs font-extrabold text-slate-900">Xưởng Trực Tiếp</p>
-                      <p className="text-[10px] text-stone-900 font-semibold">Thi Công Trọn Gói</p>
-                    </div>
-                  </div>
-
+                  <span className="text-[11px] bg-white text-black font-extrabold px-2.5 py-1 rounded-lg shadow-sm">
+                    Khải Thiên Furnishing
+                  </span>
+                </div>
               </div>
-            </div>
 
+              {/* Floating Badge - Xưởng */}
+              <div className="absolute -top-4 -left-4 bg-white p-3 rounded-2xl shadow-xl border border-stone-200 flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-stone-100 text-stone-900 flex items-center justify-center font-bold border border-stone-300 shrink-0">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <div className="text-left pr-1 whitespace-nowrap">
+                  <p className="text-xs font-extrabold text-slate-900">Xưởng Trực Tiếp</p>
+                  <p className="text-[10px] text-stone-900 font-semibold">Thi Công Trọn Gói</p>
+                </div>
+              </div>
+
+            </div>
           </div>
+
         </div>
+      </div>
     </section>
   );
 }

@@ -77,11 +77,11 @@ export default function ConsultationForm() {
           {/* Cột trái: Tinh gọn cam kết */}
           <div className="lg:col-span-5 space-y-5">
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance">
+            <h2 className="text-3xl sm:text-4xl text-center sm:text-left font-bold text-slate-900 tracking-[0.015em] leading-[1.35] text-balance">
               Nhận Tư Vấn & Báo Giá Trực Tiếp Từ Xưởng
             </h2>
 
-            <p className="text-slate-600 text-sm leading-relaxed text-pretty">
+            <p className="text-slate-600 text-center sm:text-left text-sm leading-relaxed text-pretty">
               Đội ngũ kiến trúc sư Khải Thiên sẵn sàng hỗ trợ khảo sát, tư vấn giải pháp không gian và báo giá chi tiết cho công trình của bạn.
             </p>
 

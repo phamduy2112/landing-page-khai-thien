@@ -32,7 +32,7 @@ export default function Testimonials() {
 
         {/* Header */}
         <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-[0.015em]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
             Đánh Giá Từ Khách Hàng
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
