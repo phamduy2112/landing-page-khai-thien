@@ -114,17 +114,19 @@ export default function ProjectVideoShowcase() {
 
           {/* 1. KHUNG PHÁT VIDEO CHÍNH (Bên trái: 8 Cột) */}
           <div className="lg:col-span-8 bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col justify-between w-full">
-            <div className="w-full relative bg-black flex items-center justify-center overflow-hidden h-[60vh] sm:h-[460px] md:h-[500px] lg:aspect-video">
+            <div className="w-full relative bg-black flex items-center justify-center overflow-hidden h-[55vh] sm:h-[460px] md:h-[500px] lg:aspect-video">
               {currentMedia.type === 'iframe' ? (
-                /* Với Google Drive iframe, dùng scale và translateY nhẹ để giấu hoàn toàn thanh header bar & control icons */
-                <div className="relative w-full h-full overflow-hidden bg-black">
+                /* Bọc iframe với tỷ lệ zoom 106% để cắt sạch 100% thanh header trên và thanh đáy chứa 1x, CC, âm thanh */
+                <div className="relative w-full h-full overflow-hidden bg-black flex items-center justify-center">
                   <iframe
                     key={currentMedia.embedUrl}
                     src={currentMedia.embedUrl}
-                    className="w-full border-0 absolute left-0 right-0"
+                    className="border-0 pointer-events-auto"
                     style={{
-                      height: 'calc(100% + 56px)',
-                      top: '-56px'
+                      width: '100%',
+                      height: 'calc(100% + 110px)',
+                      marginTop: '-56px',
+                      marginBottom: '-54px'
                     }}
                     allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                     allowFullScreen
