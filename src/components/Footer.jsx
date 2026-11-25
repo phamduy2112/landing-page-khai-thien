@@ -41,6 +41,13 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-stone-900 shrink-0 mt-0.5" />
                 <div>
+                  <strong className="text-slate-900 block font-semibold">Showroom Trưng Bày:</strong>
+                  <span className="text-slate-600">{brandInfo.addressShowroom}</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-stone-900 shrink-0 mt-0.5" />
+                <div>
                   <strong className="text-slate-900 block font-semibold">Trụ sở & Văn phòng KTS:</strong>
                   <span className="text-slate-600">{brandInfo.addressOffice}</span>
                 </div>

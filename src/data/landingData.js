@@ -8,6 +8,7 @@ export const brandInfo = {
   email: "khaithienfurniture@gmail.com",
   website: "noithatkhaithien.com",
   addressOffice: "129/8K Nguyễn Trãi, Phường Chợ Quán, TP. Hồ Chí Minh",
+  addressShowroom: "606/112 Đường 3/2, Phường Diên Hồng, TP. Hồ Chí Minh",
   zaloUrl: "https://zalo.me/0766666633",
   stats: [
     { value: "99%", label: "Chuẩn xác phối cảnh 3D", desc: "Từng đường nét, tỉ lệ & màu sắc vật liệu" },

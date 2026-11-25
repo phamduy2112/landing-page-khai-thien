@@ -29,7 +29,7 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <a href="#he-thong-co-so" className="flex items-center gap-1.5 hover:text-stone-900 transition whitespace-nowrap">
               <MapPin className="w-3.5 h-3.5 text-stone-900 shrink-0" />
-              <span>Showroom: {brandInfo.addressOffice}</span>
+              <span>Showroom: {brandInfo.addressShowroom}</span>
             </a>
             <span className="flex items-center gap-1.5 whitespace-nowrap">
               <Clock className="w-3.5 h-3.5 text-stone-900 shrink-0" />
