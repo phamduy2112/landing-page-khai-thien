@@ -173,26 +173,7 @@ export default function ProjectVideoShowcase() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1 sm:pt-0">
-                {currentMedia.type === 'iframe' && (
-                  <a
-                    href={activeVideo.src}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition border border-white/10 whitespace-nowrap"
-                  >
-                    <span>Mở Toàn Màn Hình</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </a>
-                )}
-                <a
-                  href="#consultation"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-stone-200 text-black text-xs font-bold transition shadow whitespace-nowrap"
-                >
-                  <span>Nhận Tư Vấn Công Trình</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
+
             </div>
           </div>
 

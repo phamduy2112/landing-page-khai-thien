@@ -22,7 +22,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full transition-all duration-300">
+    <header className="sti  cky top-0 z-50 w-full transition-all duration-300">
       {/* Top Bar - Trắng sáng đồng bộ */}
       <div className="bg-stone-50 text-slate-600 text-xs py-2 px-4 border-b border-stone-200 hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">

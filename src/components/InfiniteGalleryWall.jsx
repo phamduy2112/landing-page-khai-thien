@@ -94,7 +94,7 @@ export default function InfiniteGalleryWall() {
   }, [currentPhotoIdx, activeSpace]);
 
   return (
-    <section id="gallery-wall" className="py-20 bg-[#FAF8F5] text-slate-800 relative overflow-hidden border-t border-stone-200">
+    <section id="portfolio" className="py-20 bg-[#FAF8F5] text-slate-800 relative overflow-hidden border-t border-stone-200">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full pointer-events-none" />
 

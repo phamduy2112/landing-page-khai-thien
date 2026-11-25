@@ -152,11 +152,10 @@ export default function HomeGallerySection() {
                 key={cat.id}
                 type="button"
                 onClick={() => setActiveCategory(cat.id)}
-                className={`py-2 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
-                  activeCategory === cat.id
+                className={`py-2 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${activeCategory === cat.id
                     ? 'bg-stone-900 text-white shadow-lg shadow-amber-500/20'
                     : 'bg-stone-800/80 text-stone-300 hover:bg-stone-800 hover:text-white border border-stone-700'
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
@@ -170,9 +169,8 @@ export default function HomeGallerySection() {
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className={`group relative rounded-2xl overflow-hidden cursor-pointer border border-stone-800 hover:border-stone-900/60 transition-all duration-500 shadow-md hover:shadow-2xl flex flex-col justify-between ${
-                activeCategory === 'all' && item.colSpan ? item.colSpan : ''
-              } ${activeCategory === 'all' && item.rowSpan ? item.rowSpan : ''}`}
+              className={`group relative rounded-2xl overflow-hidden cursor-pointer border border-stone-800 hover:border-stone-900/60 transition-all duration-500 shadow-md hover:shadow-2xl flex flex-col justify-between ${activeCategory === 'all' && item.colSpan ? item.colSpan : ''
+                } ${activeCategory === 'all' && item.rowSpan ? item.rowSpan : ''}`}
             >
               {/* Background Image */}
               <img
