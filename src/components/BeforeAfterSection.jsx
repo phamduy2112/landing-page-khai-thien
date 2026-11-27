@@ -9,45 +9,62 @@ export default function BeforeAfterSection() {
   const isDragging = useRef(false);
 
   const projects = [
-    {
-      id: 'goldview-pk',
-      title: 'The GoldView - Phòng Khách',
-      area: 'Cải tạo phòng khách - bếp',
-      style: 'Hiện Đại - Tối Ưu',
-      render3D: '../assets/Phong_khach_TRUOC.png',
-      reality: '../assets/Phong_khach_SAU.png',
-      desc: 'Tối ưu sảnh vào tủ giày sát trần, quầy bar mini chia không gian bếp và hệ tủ trang trí cánh kính âm LED sang trọng.'
-    },
-    {
-      id: 'goldview-pn',
-      title: 'The GoldView - Phòng Ngủ',
-      area: 'Phòng ngủ Master',
-      style: 'Ấm Cúng - Tinh Tế',
-      render3D: '../assets/Phong_ngu_TRUOC.png',
-      reality: '../assets/Phong_ngu_SAU.png',
-      desc: 'Giường ngủ bục thông minh kết hợp hệ tủ quần áo cánh kính kịch trần, tối ưu tối đa diện tích lưu trữ và ánh sáng ấm cúng.'
-    },
-    {
-      id: 'goldview-2pn-pk',
-      title: 'The GoldView 2PN - Khách Bếp',
-      area: '110m²',
-      style: 'Độc Bản Nam Tính',
-      render3D: '../assets/Phong_khach_truoc_01.jpg',
-      reality: '../assets/Phong_khach_sau_01.webp',
-      desc: 'Cải tạo trọn gói căn hộ cũ xuống cấp: Ốp vách than tre kết hợp cửa giấu khuôn, hệ tủ bếp song song đảo bếp tích hợp phụ kiện inox.'
-    },
 
     {
-      id: 'nha-pho-pham-van-chi',
-      title: 'Nhà Phố Phạm Văn Chí - 3 Phòng Ngủ, 3 Cá Tính',
-      area: 'Đang cập nhật',
-      style: 'Hiện Đại - Tối Ưu Công Năng',
-      render3D: '../assets/88.webp',
-      reality: '../assets/89.webp',
-      desc: 'Dự án thiết kế và thi công nội thất nhà phố Phạm Văn Chí với 3 phòng ngủ mang 3 phong cách riêng biệt. Khải Thiên Furnishing chú trọng tối ưu không gian lưu trữ, kết hợp hài hòa giữa thẩm mỹ, công năng và nhu cầu sử dụng của từng thành viên. Từ bản vẽ 3D đến thực tế hoàn thiện, mỗi chi tiết đều được chăm chút để tạo nên không gian sống tiện nghi, tinh tế và đồng bộ.'
+      id: 'goldview-2pn-pk',
+      type: 'before-after',
+      title: 'The GoldView - Cải Tạo Phòng Khách',
+      area: '110m²',
+      style: 'Hiện Đại - Sang Trọng & Cá Tính',
+      render3D: '../assets/before_phong_khach.png',
+      reality: '../assets/after_phong_khach.png',
+      desc: 'Lột xác không gian phòng khách từ hiện trạng cũ xuống cấp thành không gian sống hiện đại và sang trọng. Nổi bật với hệ vách tivi tông xám đen, tủ trưng bày cánh kính tích hợp LED âm, sofa màu kem, bàn trà vân đá và hệ đèn ray âm trần tinh tế. Thiết kế tận dụng ánh sáng tự nhiên từ ban công, mang đến không gian sống thông thoáng, tiện nghi và đậm dấu ấn cá nhân.'
     },
     {
+      id: 'vista-verde-bep',
+      type: 'before-after',
+      title: 'Vista Verde - Phòng Bếp & Bàn Ăn',
+      area: 'Cải tạo căn hộ 110m²',
+      style: 'Japandi - Mộc Mạc & Tinh Tế',
+      render3D: '../assets/before1.png',
+      reality: '../assets/after1.png',
+      desc: 'Cải tạo không gian phòng khách - bếp liên thông với hệ tủ bếp vân gỗ may đo, đảo bếp tiện nghi, bàn ăn kết hợp ghế xanh lá và trần uốn cong mềm mại. Sự kết hợp giữa sàn gỗ, gạch terrazzo và ánh sáng vàng tạo nên không gian sống ấm cúng, tinh tế và tối ưu công năng.'
+    },
+    {
+      id: 'vista-verde-bep-3d',
+      type: 'design-after',
+      title: 'Vista Verde - Phòng Bếp & Bàn Ăn (3D)',
+      area: 'Căn hộ 110m²',
+      style: 'Japandi - Mộc Mạc & Tinh Tế',
+      render3D: '../assets/thietket3d1.png',
+      reality: '../assets/after2.png',
+      desc: 'Đối chiếu phối cảnh 3D và không gian bếp hoàn thiện với hệ tủ vân gỗ may đo, đảo bếp, bàn ăn và các đường cong mềm mại, tạo nên không gian ấm cúng và tiện nghi.'
+    },
+    {
+      id: 'cai-tao-nha-pho-quan-4',
+      type: 'before-after',
+      title: 'Nhà Phố Quận 4 - Cải Tạo Phòng Khách & Bếp',
+      area: 'Nhà phố 2 tầng',
+      style: 'Wabi-Sabi - Hiện Đại & Tinh Tế',
+      render3D: '../assets/before3.png',
+      reality: '../assets/after3.webp',
+      desc: 'Cải tạo nhà phố cũ xuống cấp tại Quận 4 với giải pháp không gian mở kết nối phòng khách, bếp và bàn ăn. Thiết kế mang tinh thần Wabi-Sabi với gam màu trắng kem chủ đạo, đường nét bo cong mềm mại, hệ tủ bếp kịch trần và điểm nhấn inox vàng bóng sang trọng. Khải Thiên Furnishing hướng đến không gian sống thông thoáng, tinh tế và tối ưu công năng.'
+    },
+    {
+      id: 'goldview-phong-khach-3d',
+      type: 'design-after',
+      title: 'The GoldView - Phòng Khách',
+      area: 'Không gian phòng khách',
+      style: 'Hiện Đại - Sang Trọng & Cá Tính',
+      render3D: '../assets/design4.png',
+      reality: '../assets/after4.png',
+      desc: 'Không gian phòng khách hiện đại nổi bật với hệ vách tivi tông xám đen, tủ trưng bày cánh kính tích hợp LED âm, bàn trà vân đá sang trọng và hệ đèn trần tinh tế. Từ phối cảnh 3D đến thực tế thi công, Khải Thiên Furnishing chú trọng sự đồng bộ về màu sắc, vật liệu và công năng sử dụng.'
+    },
+
+
+    {
       id: 'phong-ngu-be-gai-pham-van-chi',
+      type: 'design-after',
       title: 'Phòng Ngủ Bé Gái 8 Tuổi - Nhà Phố Phạm Văn Chí',
       area: 'Đang cập nhật',
       style: 'Hiện Đại - Tươi Sáng & Đáng Yêu',
@@ -56,23 +73,29 @@ export default function BeforeAfterSection() {
       desc: 'Không gian phòng ngủ bé gái 8 tuổi nổi bật với gam màu cam đào và trắng kem nhẹ nhàng. Thiết kế sử dụng các đường bo cong, chi tiết hình vòm mềm mại, kết hợp giường ngủ tích hợp ngăn kéo, bàn học, kệ sách và hệ tủ lưu trữ cao sát trần. Từ hiện trạng ban đầu đến thực tế hoàn thiện, Khải Thiên Furnishing mang đến một không gian tươi sáng, tiện nghi, phù hợp với sở thích của bé và có thể sử dụng lâu dài khi bé lớn lên.'
     },
     {
-      id: 'cai-tao-phong-khach-bep-goldview',
-      title: 'Cải Tạo Phòng Khách & Bếp - The Goldview',
-      area: '35m²',
-      style: 'Hiện Đại - Sang Trọng & Tiện Nghi',
-      render3D: '../assets/92.webp',
-      reality: '../assets/93.jpg',
-      desc: 'Dự án cải tạo phòng khách và bếp tại chung cư The Goldview Block A3, Quận 4. Từ hiện trạng nội thất cũ xuống cấp, Khải Thiên Furnishing đã kiến tạo không gian sống hiện đại với tông gỗ tối sang trọng, hệ tủ TV kết hợp vách trang trí tinh tế, sàn gỗ xương cá và hệ bếp chữ U tối ưu công năng. Sự thay đổi rõ nét giữa trước và sau thi công mang đến không gian sống tiện nghi, ấm cúng và phù hợp với nhu cầu sinh hoạt của gia đình.'
+      id: 'cai-tao-phong-khach-vista-verde',
+      type: 'before-after',
+      title: 'Vista Verde - Cải Tạo Phòng Khách',
+      area: 'Căn hộ 110m²',
+      style: 'Japandi - Mộc Mạc & Tinh Tế',
+      render3D: '../assets/before5.png',
+      reality: '../assets/after5.png',
+      desc: 'Dự án cải tạo nội thất căn hộ Vista Verde, Quận 2, từ hiện trạng cũ thành không gian sống tinh tế mang phong cách Japandi. Phòng khách nổi bật với sofa da nâu caramel, vách kính khung bo cong, sàn gỗ tông trầm, vách tivi sơn hiệu ứng kết hợp hệ tủ treo tối giản. Hệ đèn LED hắt trần cùng ánh sáng tự nhiên từ ban công mang đến không gian sống thông thoáng, ấm cúng và tiện nghi.'
     },
   ];
 
   const current = projects[activeProjectIdx];
+  const isDesign = current.type === 'design-after';
+  const leftLabel = isDesign ? 'Thiết Kế 3D' : 'Trước Thi Công';
+  const rightLabel = 'Sau Thi Công';
 
   const handlePrev = () => {
+    setSliderPosition(50);
     setActiveProjectIdx((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
+    setSliderPosition(50);
     setActiveProjectIdx((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };
 
@@ -101,10 +124,10 @@ export default function BeforeAfterSection() {
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center space-y-2 mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-[0.015em]">
-            Trước & Sau Thi Công – Sự Thay Đổi Không Gian
+            Từ Thiết Kế Đến Thực Tế – Sự Thay Đổi Không Gian
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Kéo thanh trượt hoặc chuyển chế độ để so sánh độ chuẩn xác từng chi tiết thi công từ xưởng Khải Thiên
+            Khám phá sự thay đổi trước và sau thi công hoặc đối chiếu thiết kế 3D với công trình hoàn thiện.
           </p>
         </div>
 
@@ -181,7 +204,7 @@ export default function BeforeAfterSection() {
               {/* Layer 1: Real Handover (Underneath) */}
               <img
                 src={current.reality}
-                alt="Thực tế bàn giao"
+                alt={rightLabel}
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
 
@@ -192,7 +215,7 @@ export default function BeforeAfterSection() {
               >
                 <img
                   src={current.render3D}
-                  alt="Phối cảnh 3D"
+                  alt={leftLabel}
                   className="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
                   style={{
                     width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%',
@@ -216,14 +239,14 @@ export default function BeforeAfterSection() {
               {/* Badges on image - Tách biệt rõ ràng, không bao giờ đè lên nhau */}
               <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-10 pointer-events-none">
                 <span className="px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-black/90 backdrop-blur-md border border-white/10 text-white shadow">
-                  Trước Thi Công
+                  {leftLabel}
                 </span>
               </div>
 
               <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-10 pointer-events-none">
                 <span className="px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-600/95 backdrop-blur-md text-white shadow flex items-center gap-1 sm:gap-1.5">
                   <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                  <span>Thực Tế Bàn Giao</span>
+                  <span>{rightLabel}</span>
                 </span>
               </div>
 
@@ -267,14 +290,14 @@ export default function BeforeAfterSection() {
                 <div className="relative rounded-2xl overflow-hidden border border-stone-200 h-[320px] sm:h-[400px] bg-stone-100 group shadow-md">
                   <img
                     src={current.render3D}
-                    alt="Bản vẽ 3D phối cảnh"
+                    alt={leftLabel}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 text-stone-900 text-xs font-bold uppercase tracking-wider">
-                    🎨 Phối Cảnh 3D Đã Duyệt
+                  <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 text-white text-xs font-bold uppercase tracking-wider">
+                    {leftLabel}
                   </div>
                 </div>
-                <p className="text-center text-xs text-slate-600 font-medium">Bản thiết kế phương án cải tạo công năng 3D</p>
+                <p className="text-center text-xs text-slate-600 font-medium">{isDesign ? 'Bản phối cảnh thiết kế 3D' : 'Hiện trạng trước khi thi công'}</p>
               </div>
 
               {/* Reality Card */}
@@ -282,18 +305,18 @@ export default function BeforeAfterSection() {
                 <div className="relative rounded-2xl overflow-hidden border-2 border-stone-900/70 h-[320px] sm:h-[400px] bg-stone-100 group shadow-xl">
                   <img
                     src={current.reality}
-                    alt="Thực tế bàn giao"
+                    alt={rightLabel}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 bg-emerald-600/95 backdrop-blur-md px-3.5 py-1.5 rounded-lg text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>Thực Tế Hoàn Thiện</span>
+                    <span>{rightLabel}</span>
                   </div>
-                  <div className="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur-md px-3 py-1 rounded-md text-stone-900 text-xs font-bold">
+                  <div className="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur-md px-3 py-1 rounded-md text-white text-xs font-bold">
                     Trực tiếp từ xưởng Khải Thiên
                   </div>
                 </div>
-                <p className="text-center text-xs text-stone-900 font-semibold">Công trình thi công thực tế tại The GoldView Block B</p>
+                <p className="text-center text-xs text-stone-900 font-semibold">Công trình hoàn thiện – {current.title}</p>
               </div>
             </div>
 

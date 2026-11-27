@@ -18,7 +18,7 @@ export default function RoomExperience() {
       name: 'Phòng Bếp & Ăn',
       enName: 'KITCHEN & DINING',
       materials: 'Bố trí công năng khoa học, hệ tủ bếp hiện đại, gọn gàng và tiện nghi tối đa cho gia chủ.',
-      image: '/assets/18_Can_Ho_Goldview/18_Can_Ho_Goldview_005.jpg',
+      image: '/assets/phongbep.jpg',
       badge: 'Tiện Nghi Ấm Cúng'
     },
     {
@@ -27,7 +27,7 @@ export default function RoomExperience() {
       name: 'Phòng Ngủ Master',
       enName: 'MASTER BEDROOM SUITE',
       materials: 'Không gian nghỉ dưỡng riêng tư đẳng cấp với giường ngủ, tủ quần áo và tab đầu giường đồng bộ.',
-      image: '/assets/16_Phong_Ngu_Nguyen_Khoai/16_Phong_Ngu_Nguyen_Khoai_002.jpg',
+      image: '/assets/phongngu.jpg',
       badge: 'Thư Thái & Riêng Tư'
     }
   ];

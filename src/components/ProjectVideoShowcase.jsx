@@ -5,11 +5,11 @@ import { Sparkles, Video, MapPin, ArrowRight } from 'lucide-react';
 const videoList = [
   {
     id: 1,
-    title: 'Thiết Kế & Thi Công Nội Thất Phòng Ngủ Lý Chính Thắng',
-    location: 'Đường Lý Chính Thắng, Quận 3, TP.HCM',
+    title: 'Thiết Kế & Thi Công Nội Thất Phòng Ngủ Cô Ngọc Hoàng',
+    location: 'Đường Nhiêu Tâm, Quận 5, TP.HCM',
     tag: 'Nội Thất Phòng Ngủ',
-    src: 'https://drive.google.com/file/d/1M4XFTavxoeBzKDB6Wsnm8a5-a8Az1CrM/view?usp=sharing',
-    desc: 'Giải pháp hoàn thiện nội thất phòng ngủ nhà phố tại Lý Chính Thắng (Quận 3): Tối ưu công năng lưu trữ kịch trần, màu sắc hiện đại ấm cúng, gia công tỉ mỉ trực tiếp từ xưởng Khải Thiên.'
+    src: 'https://drive.google.com/file/d/1jwzH562_ZIBrMqY_yNFt2h3MsQXWwvyg/view?usp=sharing',
+    desc: 'Thiết kế và thi công nội thất phòng ngủ Master và phòng ngủ phụ tại nhà phố 5 tầng của cô Ngọc Hoàng, đường Nhiêu Tâm, Quận 5. Phong cách hiện đại, tinh tế, tối ưu công năng sử dụng và không gian lưu trữ, mang đến trải nghiệm nghỉ ngơi tiện nghi, ấm cúng với nội thất may đo theo yêu cầu gia chủ từ xưởng Khải Thiên.'
   },
   {
     id: 2,
