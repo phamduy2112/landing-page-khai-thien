@@ -10,8 +10,8 @@ export default function HeadquartersSection() {
       name: 'Showroom Đường 3/2',
       tag: 'Trải Nghiệm Nội Thất Thực Tế',
       address: brandInfo.addressShowroom,
-      mapUrl: 'https://maps.google.com/maps?q=606%2F112%20%C4%90%C6%B0%E1%BB%9Dng%203%2F2%2C%20Ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=16&ie=UTF8&iwloc=&output=embed',
-      directionsUrl: 'https://www.google.com/maps/search/?api=1&query=606%2F112+%C4%90%C6%B0%E1%BB%9Dng+3%2F2,+Ph%C6%B0%E1%BB%9Dng+Di%C3%AAn+H%E1%BB%93ng,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh'
+      mapUrl: 'https://maps.google.com/maps?q=10.7667945,106.6621843&hl=vi&z=17&output=embed',
+      directionsUrl: 'https://www.google.com/maps/place/N%E1%BB%99i+Th%E1%BA%A5t+Kh%E1%BA%A3i+Thi%C3%AAn/@10.7667945,106.6621843,17z/data=!3m1!4b1!4m6!3m5!1s0x31752fc8baa0ce77:0x8c8a82399c0f8dcc!8m2!3d10.7667945!4d106.6621843!16s%2Fg%2F11ff47svhb'
     },
     {
       id: 'office-nguyen-trai',
